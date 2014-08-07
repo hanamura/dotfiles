@@ -78,6 +78,9 @@ function pec() {
   fi
 }
 
+# kill + peco
+alias pek='ps aux | tail -n +2 | peco | awk '"'"'{ print $2 }'"'"' | xargs kill'
+
 # npm completion
 # ==============
 
