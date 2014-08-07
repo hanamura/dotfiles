@@ -1,0 +1,19 @@
+snippet     fn
+abbr        fn
+options     word
+  function(${1}) ${2:use(${3\}) }{${4}}
+
+snippet     if-html
+abbr        if
+options     word
+  <?php if (${1}): ?>${2}<?php endif ?>
+
+snippet     foreach-html
+abbr        foreach
+options     word
+  <?php foreach (${1:$items} as ${2:$key}${3: => ${4:$value\}}): ?>${5}<?php endforeach ?>
+
+snippet     foreach
+abbr        foreach
+options     word
+  foreach (${1:$items} as ${2:$key}${3: => ${4:$value\}}) {${5}}

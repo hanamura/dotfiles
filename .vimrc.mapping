@@ -1,0 +1,49 @@
+" references:
+" - https://github.com/yuroyoro/dotfiles/blob/master/.vimrc.moving
+
+" emacs-like
+no <C-e> <End>
+no <C-a> <Home>
+no <C-f> <Right>
+no <C-b> <Left>
+no <C-p> <Up>
+no <C-n> <Down>
+no! <C-e> <End>
+no! <C-a> <Home>
+no! <C-f> <Right>
+no! <C-b> <Left>
+no! <C-p> <Up>
+no! <C-n> <Down>
+
+" j/k for wrapped line
+nnoremap <silent> j gj
+nnoremap <silent> gj j
+nnoremap <silent> k gk
+nnoremap <silent> gk k
+vnoremap <silent> j gj
+vnoremap <silent> gj j
+vnoremap <silent> k gk
+vnoremap <silent> gk k
+
+" nohighlight
+nnoremap <Esc><Esc> :noh<CR>
+nnoremap <C-c><C-c> :noh<CR>
+
+" surround
+vmap ] S]
+vmap [ S]
+vmap } S}
+vmap { S}
+vmap ( S)
+vmap ) S)
+vmap ' S'
+vmap " S"
+
+nmap ] ysiw]
+nmap [ ysiw]
+nmap } ysiw}
+nmap { ysiw}
+nmap ) ysiw)
+nmap ( ysiw)
+nmap ' ysiw'
+nmap " ysiw"

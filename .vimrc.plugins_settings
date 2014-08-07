@@ -1,0 +1,135 @@
+" references:
+" - https://github.com/yuroyoro/dotfiles/blob/master/.vimrc.plugins_setting
+
+" netrw
+" =====
+let g:netrw_liststyle=3 " always tree view
+let g:netrw_altv=1 " open file in the right buffer with 'v'
+let g:netrw_alto=1 " open file in the buffer below with 'o'
+
+" neocomplete
+" ===========
+if neobundle#is_installed('neocomplete')
+  let g:neocomplete#enable_at_startup=1
+  let g:neocomplete#enable_ignore_case=1
+  let g:neocomplete#enable_smart_case=1
+  if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns={}
+  endif
+  let g:neocomplete#keyword_patterns._='\h\w*'
+endif
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" neosnippet
+" https://github.com/Shougo/neosnippet.vim
+" ========================================
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+let g:neosnippet#snippets_directory='~/.snippets'
+
+" autoclose
+" =========
+let g:autoclose_vim_commentmode=1
+
+" unite
+" =====
+nnoremap <silent> <Leader>ff :<C-u>Unite<Space>file<CR>
+nnoremap <silent> <Leader>fb :<C-u>Unite<Space>buffer<CR>
+nnoremap <silent> <Leader>fs :<C-u>Unite<Space>source<CR>
+nnoremap <silent> <Leader>fr :<C-u>Unite<Space>file_mru<CR>
+
+" markdown
+" ========
+let g:markdown_fenced_languages=[
+      \ 'coffee',
+      \ 'css',
+      \ 'javascript',
+      \ 'js=javascript',
+      \ 'json=javascript',
+      \ 'ruby',
+      \ 'sass',
+      \ 'xml',
+      \ ]
+
+" nerdtree
+" ========
+nmap <silent> <C-t> :NERDTreeToggle<CR>
+vmap <silent> <C-t> <Esc>:NERDTreeToggle<CR>
+omap <silent> <C-t> :NERDTreeToggle<CR>
+cmap <silent> <C-t> <C-u>:NERDTreeToggle<CR>
+let g:NERDTreeShowHidden=1
+let g:NERDTreeShowBookmarks=1
+let g:NERDTreeIgnore=[
+      \ '\~$',
+      \ '^.bundle$[[dir]]',
+      \ '^.git$[[dir]]',
+      \ '^.sass-cache$[[dir]]',
+      \ '^bower_components$[[dir]]',
+      \ '^node_modules$[[dir]]',
+      \ '^.DS_Store$[[file]]',
+      \ '.lock$[[file]]',
+      \ '.sublime-project$[[file]]',
+      \ '.sublime-workspace$[[file]]',
+      \ ]
+
+" ctrlp
+" =====
+let g:ctrlp_map='<C-l>'
+let g:ctrlp_cmd='CtrlPMixed'
+let g:ctrlp_extensions=[
+      \ 'dir',
+      \ 'line',
+      \ ]
+let g:ctrlp_show_hidden=1
+let g:ctrlp_use_migemo=1
+let g:ctrlp_prompt_mappings={
+      \ 'PrtSelectMove("j")':   ['<c-n>', '<c-j>', '<down>'],
+      \ 'PrtSelectMove("k")':   ['<c-p>', '<c-k>', '<up>'],
+      \ 'PrtHistory(-1)':       [],
+      \ 'PrtHistory(1)':        [],
+      \ 'AcceptSelection("e")': ['<c-e>', '<cr>', '<2-LeftMouse>'],
+      \ 'PrtCurEnd()':          [],
+      \ 'PrtCurRight()':        ['<right>'],
+      \ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>', '<c-l>'],
+      \ }
+
+" tabular
+" =======
+nnoremap <Leader>a= :Tabularize /=<CR>
+vnoremap <Leader>a= :Tabularize /=<CR>
+nnoremap <Leader>a: :Tabularize /,\zs/l0c1<CR>
+vnoremap <Leader>a: :Tabularize /,\zs/l0c1<CR>
+nnoremap <Leader>a: :Tabularize /:\zs/l0c1<CR>
+vnoremap <Leader>a: :Tabularize /:\zs/l0c1<CR>
+nnoremap <Leader>a> :Tabularize /^[^=]*\zs=><CR>
+vnoremap <Leader>a> :Tabularize /^[^=]*\zs=><CR>
+
+" airline
+" =======
+if !exists('g:airline_symbols')
+  let g:airline_symbols={}
+endif
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_symbols.branch='⎇'
+let g:airline_theme='badwolf'
+let g:airline#extensions#tabline#enabled=1
+
+" quickrun
+" ========
+let g:quickrun_config={}
+let g:quickrun_config['coffee']={
+      \ 'command': 'coffee',
+      \ 'exec':    ['%c -cbp %s'],
+      \ }

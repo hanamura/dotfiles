@@ -1,0 +1,102 @@
+" references:
+" - https://github.com/yuroyoro/dotfiles/blob/master/.vimrc.basic
+
+" swap file, backup file
+set noswapfile
+set nobackup
+
+" encoding
+set encoding=utf-8
+
+" line number
+set number
+
+" show match of ()
+set showmatch
+
+" keep marginal lines above/below cursor
+set scrolloff=5
+
+" auto-read modified file
+set autoread
+
+" no wrap
+set wrap
+set textwidth=0
+
+" set enable to open other files if it’s editing
+set hidden
+
+" enable backspace to delete anything
+set backspace=indent,eol,start
+
+" text formatting
+autocmd FileType * set formatoptions=lmq
+
+" visualbell, no beaps
+set vb t_vb=
+
+" space and indent
+set autoindent
+set smartindent
+set cindent
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=0
+
+" search
+set wrapscan
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+" invisible chars
+set list
+set listchars=tab:▸-,trail:-
+set display=uhex
+
+" set initial directory to buffer
+set browsedir=buffer
+
+" movable cursor
+set whichwrap=b,s,h,l,<,>,[,]
+
+" viminfo file settings
+set viminfo='50,<1000,s100,\"50
+
+" modeline settings
+set modeline
+set modelines=5
+
+" enable os clipboard
+set clipboard=unnamed
+
+" enable mouse on terminal
+set mouse=a
+set guioptions+=a
+set ttymouse=xterm2
+
+" turn off IME on exiting insert mode
+set noimdisable
+set iminsert=0 imsearch=0
+set noimcmdline
+inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+
+" completeopt
+set completeopt=menu,preview
+
+" command to edit .vimrc
+command! Rv source $MYVIMRC
+
+" colorscheme for commandline
+syntax enable
+set background=dark
+colorscheme solarized
+
+" vagrant
+augroup vagrant
+  autocmd!
+  autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
+augroup END
