@@ -35,8 +35,6 @@ local repo=$(cd $(dirname $0); pwd)
     ".zlogin"
     # atom
     ".atom"
-    # ssh
-    ".ssh/config"
   )
 
   # check all filenames
