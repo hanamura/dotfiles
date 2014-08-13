@@ -30,6 +30,8 @@ NeoBundle 'rhysd/clever-f.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kana/vim-textobj-line'
 NeoBundle 'kana/vim-textobj-entire'
+NeoBundle 'kana/vim-textobj-function'
+NeoBundle 'kana/vim-textobj-indent'
 
 " completion
 NeoBundle 'Shougo/neocomplete'
