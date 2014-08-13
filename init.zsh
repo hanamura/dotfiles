@@ -48,6 +48,7 @@ __link() {
 () {
   local -a names
   local name
+  local filepath
 
   # targets
   names=(
@@ -76,6 +77,22 @@ __link() {
   )
   for name in $names; do
     __link $repo/$name $HOME/$name
+  done
+
+  # sketch 3 plugins
+  for filepath in $repo/sketch/*; do
+    name="$(basename $filepath)"
+
+    echo $fg[cyan]"sync sketch plugin: $name"$fg[default]
+
+    rsync \
+      --archive \
+      --verbose \
+      --delete \
+      --checksum \
+      --exclude=".git" \
+      "$filepath/" \
+      "$HOME/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application Support/com.bohemiancoding.sketch3/Plugins/$name/"
   done
 }
 

@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/neobundle.vim"]
 	path = .vim/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim
+[submodule "sketch/Sketch-Plugin-Scripts"]
+	path = sketch/Sketch-Plugin-Scripts
+	url = git@github.com:makzan/Sketch-Plugin-Scripts.git
