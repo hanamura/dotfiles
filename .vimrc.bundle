@@ -32,6 +32,7 @@ NeoBundle 'kana/vim-textobj-line'
 NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'kana/vim-textobj-function'
 NeoBundle 'kana/vim-textobj-indent'
+NeoBundle 'kana/vim-smartword'
 
 " completion
 NeoBundle 'Shougo/neocomplete'
