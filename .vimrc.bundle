@@ -27,6 +27,9 @@ NeoBundle 'tyru/caw.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'rhysd/clever-f.vim'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kana/vim-textobj-line'
+NeoBundle 'kana/vim-textobj-entire'
 
 " completion
 NeoBundle 'Shougo/neocomplete'
