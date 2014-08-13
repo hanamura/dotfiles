@@ -7,11 +7,49 @@ git submodule update
 
 local repo=$(cd $(dirname $0); pwd)
 
+__link() {
+  local src=$1
+  local dst=$2
+  local dir="$(dirname $dst)"
+
+  # check source
+  if [ ! -e $src ]; then
+    echo $fg[red]"oops! not found in this repository: $src"$fg[default]
+    return
+  fi
+
+  # check destination
+  if [ -e $dst ]; then
+    if [ -L $dst ] && [ "$(readlink $dst)" == $src ]; then
+      echo $fg[green]"okay! symlink already exists:\n  - from: $dst\n  - to:   $src"$fg[default]
+      return
+    else
+      echo $fg[red]"? oops! unrelated file or directory already exists: $dst"$fg[default]
+      return
+    fi
+  fi
+
+  # check destination directory
+  if [ -e $dir ] && [ ! -d $dir ]; then
+    echo $fg[red]"x oops! unrelated file or directory already exists: $dst"$fg[default]
+    return
+  fi
+
+  # create directories
+  if [ ! -d $dir ]; then
+    mkdir -p $dir
+  fi
+
+  # create link
+  echo $fg[yellow]"create new symlink:\n  - from: $dst\n  - to:   $src"$fg[default]
+  ln -s $src $dst
+}
+
 () {
   local -a names
   local name
 
-  # target filenames
+  # targets
   names=(
     # ruby
     ".gemrc"
@@ -36,21 +74,8 @@ local repo=$(cd $(dirname $0); pwd)
     # atom
     ".atom"
   )
-
-  # check all filenames
   for name in $names; do
-    [ -e $repo/$name ] || continue
-
-    if [ -e $HOME/$name ]; then
-      if [ -L $HOME/$name ] && [ $(readlink $HOME/$name) == $repo/$name ]; then
-        echo $fg[green]"okay! symlink already exists: ~/$name -> $repo/$name"$fg[default]
-      else
-        echo $fg[red]"oops! unrelated file or directory already exists: ~/$name"$fg[default]
-      fi
-    else
-      echo $fg[yellow]"create new symlink: ~/$name -> $repo/$name"$fg[default]
-      ln -s $repo/$name $HOME/$name
-    fi
+    __link $repo/$name $HOME/$name
   done
 }
 
