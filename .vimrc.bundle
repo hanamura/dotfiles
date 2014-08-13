@@ -36,6 +36,7 @@ NeoBundle 'kana/vim-smartword'
 NeoBundle 'thinca/vim-textobj-function-javascript'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'terryma/vim-expand-region'
 
 " completion
 NeoBundle 'Shougo/neocomplete'
