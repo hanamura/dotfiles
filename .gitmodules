@@ -7,3 +7,6 @@
 [submodule "sketch/Sketch-Plugin-Scripts"]
 	path = sketch/Sketch-Plugin-Scripts
 	url = git@github.com:makzan/Sketch-Plugin-Scripts.git
+[submodule "sketch/Content Generator"]
+	path = sketch/Content Generator
+	url = git@github.com:timuric/Content-generator-sketch-plugin.git
