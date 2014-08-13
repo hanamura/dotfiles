@@ -140,3 +140,11 @@ map w <Plug>(smartword-w)
 map b <Plug>(smartword-b)
 map e <Plug>(smartword-e)
 map ge <Plug>(smartword-ge)
+
+" easymotion
+" ==========
+let g:EasyMotion_do_mapping=0
+map s <Plug>(easymotion-s2)
+map / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+nnoremap g/ /

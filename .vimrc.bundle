@@ -33,6 +33,8 @@ NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'kana/vim-textobj-function'
 NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'kana/vim-smartword'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'tpope/vim-repeat'
 
 " completion
 NeoBundle 'Shougo/neocomplete'
