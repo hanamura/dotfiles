@@ -148,6 +148,8 @@ map s <Plug>(easymotion-s2)
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 nnoremap g/ /
+map f <Plug>(easymotion-bd-fl)
+map t <Plug>(easymotion-bd-tl)
 
 " expandregion
 " ============
