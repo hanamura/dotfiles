@@ -144,7 +144,8 @@ map ge <Plug>(smartword-ge)
 " easymotion
 " ==========
 let g:EasyMotion_do_mapping=0
-map s <Plug>(easymotion-s2)
+map s <Plug>(easymotion-s)
+map S <Plug>(easymotion-s2)
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 nnoremap g/ /
