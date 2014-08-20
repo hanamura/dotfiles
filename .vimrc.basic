@@ -70,12 +70,11 @@ set viminfo='50,<1000,s100,\"50
 set modeline
 set modelines=5
 
-" enable os clipboard
-set clipboard=unnamed
+" clipboard
+set clipboard=
 
 " enable mouse on terminal
 set mouse=a
-set guioptions+=a
 set ttymouse=xterm2
 
 " turn off IME on exiting insert mode
