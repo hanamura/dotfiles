@@ -31,3 +31,13 @@ nnoremap <C-c><C-c> :noh<CR>
 
 " 0
 nnoremap <silent> 0 ^
+
+" clipboard
+nnoremap <Leader>y "*y
+vnoremap <Leader>y "*y
+nnoremap <Leader>yy "*yy
+vnoremap <Leader>yy "*yy
+nnoremap <Leader>p "*p
+vnoremap <Leader>p "*p
+nnoremap <Leader>P "*P
+vnoremap <Leader>P "*P
