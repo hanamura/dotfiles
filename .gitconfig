@@ -5,6 +5,7 @@
 [alias]
   l = log --pretty=oneline -n 20 --graph --abbrev-commit
   s = status -s
+  ss = status
   go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
   tags = tag -l
   branches = branch -a
