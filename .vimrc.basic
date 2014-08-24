@@ -21,7 +21,7 @@ set scrolloff=5
 set autoread
 
 " no wrap
-set wrap
+set nowrap
 set textwidth=0
 
 " set enable to open other files if it’s editing
