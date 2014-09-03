@@ -17,3 +17,8 @@ snippet     foreach
 abbr        foreach
 options     word
   foreach (${1:$items} as ${2:$key}${3: => ${4:$value\}}) {${5}}
+
+snippet     require
+abbr        req
+options     head
+  require_once dirname(__FILE__) . '/${1}';
