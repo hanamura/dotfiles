@@ -22,3 +22,22 @@ snippet     require
 abbr        req
 options     head
   require_once dirname(__FILE__) . '/${1}';
+
+snippet     class
+abbr        class
+options     head
+  class ${1:ClassName}${2: extends ${3:SuperClass\}}
+  {
+    function __construct(${4})
+    {
+      ${5:parent::__construct(${6\})}
+    }
+  }
+
+snippet     method
+abbr        method
+options     head
+  ${1:public} function ${2:methodName}(${3})
+  {
+    ${4}
+  }
