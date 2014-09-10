@@ -12,7 +12,19 @@ options     word
 
 snippet     for
 abbr        for
-options     head
+options     word
   {% for ${1} in ${2} %}
     ${3}
   {% endfor %}
+
+snippet     block
+abbr        block
+options     word
+  {% block ${1} %}
+    ${2}
+  {% endblock %}
+
+snippet     include
+abbr        include
+options     head
+  {% include '${1}'${2} %}
