@@ -1,0 +1,18 @@
+snippet     if
+abbr        if
+options     word
+  {% if ${1} %}
+    ${2}
+  {% endif %}
+
+snippet     else
+abbr        else
+options     word
+  {% else %}
+
+snippet     for
+abbr        for
+options     head
+  {% for ${1} in ${2} %}
+    ${3}
+  {% endfor %}
