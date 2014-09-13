@@ -65,6 +65,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'tpope/vim-fugitive'
 
 " colorschemes
 NeoBundle 'flazz/vim-colorschemes'
