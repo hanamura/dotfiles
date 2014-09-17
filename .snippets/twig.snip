@@ -43,3 +43,18 @@ snippet     dump
 abbr        dump
 options     word
   {{ dump(${1}) }}
+
+snippet     set
+abbr        set
+options     word
+  {% set ${1} = ${2} %}
+
+snippet     comment
+abbr        comment
+options     word
+  {# ${1} #}
+
+snippet     random
+abbr        random
+options     word
+  {{ random(${1}) }}
