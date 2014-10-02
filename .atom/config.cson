@@ -6,6 +6,7 @@
 'editor':
   'fontSize': 12
   'fontFamily': 'Andale Mono'
+  'invisibles': {}
 'welcome':
   'showOnStartup': false
 'exception-reporting':
