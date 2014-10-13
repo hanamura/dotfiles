@@ -132,4 +132,6 @@ fi
 # grunt completion
 # ================
 
-eval "$(grunt --completion=zsh)"
+if type grunt >/dev/null 2>&1; then
+  eval "$(grunt --completion=zsh)"
+fi
