@@ -135,3 +135,10 @@ fi
 if type grunt >/dev/null 2>&1; then
   eval "$(grunt --completion=zsh)"
 fi
+
+# gulp completion
+# ===============
+
+if type gulp >/dev/null 2>&1; then
+  eval "$(gulp --completion=zsh)"
+fi
