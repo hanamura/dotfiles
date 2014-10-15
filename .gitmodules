@@ -10,3 +10,6 @@
 [submodule "sketch/Content Generator"]
 	path = sketch/Content Generator
 	url = git@github.com:timuric/Content-generator-sketch-plugin.git
+[submodule ".atom/packages/color-picker"]
+	path = .atom/packages/color-picker
+	url = git@github.com:thomaslindstrom/color-picker.git

@@ -1,8 +1,3 @@
-'core':
-  'themes': [
-    'atom-dark-ui'
-    'atom-dark-syntax'
-  ]
 'editor':
   'fontSize': 12
   'fontFamily': 'Andale Mono'
@@ -17,3 +12,4 @@
   'includeCompletionsFromAllBuffers': true
 'autocomplete-plus':
   'includeCompletionsFromAllBuffers': true
+'core': {}
