@@ -81,6 +81,11 @@ function pec() {
 # kill + peco
 alias pek='ps aux | tail -n +2 | peco | awk '"'"'{ print $2 }'"'"' | xargs kill'
 
+# hub
+if type hub >/dev/null 2>&1; then
+  alias git=hub
+fi
+
 # npm completion
 # ==============
 
