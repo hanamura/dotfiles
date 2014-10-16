@@ -13,3 +13,9 @@
 [submodule ".atom/packages/color-picker"]
 	path = .atom/packages/color-picker
 	url = git@github.com:thomaslindstrom/color-picker.git
+[submodule ".atom/packages/autocomplete-plus"]
+	path = .atom/packages/autocomplete-plus
+	url = git@github.com:saschagehlich/autocomplete-plus.git
+[submodule ".atom/packages/monokai"]
+	path = .atom/packages/monokai
+	url = git@github.com:kevinsawicki/monokai.git
