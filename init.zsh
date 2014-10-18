@@ -20,7 +20,7 @@ __link() {
 
   # check destination
   if [ -e $dst ]; then
-    if [ -L $dst ] && [ "$(readlink $dst)" == $src ]; then
+    if [ -L $dst ] && [ "$(readlink $dst)" '==' $src ]; then
       echo $fg[green]"okay! symlink already exists:\n  - from: $dst\n  - to:   $src"$fg[default]
       return
     else
