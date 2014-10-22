@@ -17,6 +17,11 @@ install git || true
 install hub || true
 install tig || true
 
+# rbenv
+install rbenv
+install ruby-build
+install rbenv-gem-rehash
+
 # mercurial
 install mercurial || true
 
@@ -37,8 +42,6 @@ install wget || true
 
 # pretty
 install figlet || true
-install toilet || true
-install cowsay || true
 
 # vim
 install vim --with-lua || true
@@ -49,6 +52,7 @@ linkapps || true
 
 # zsh
 install zsh || true
+install bash
 
 # heroku
 install heroku-toolbelt || true
