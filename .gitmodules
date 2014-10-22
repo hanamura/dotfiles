@@ -19,6 +19,3 @@
 [submodule ".atom/packages/monokai"]
 	path = .atom/packages/monokai
 	url = git@github.com:kevinsawicki/monokai.git
-[submodule ".rbenv"]
-	path = .rbenv
-	url = git@github.com:sstephenson/rbenv.git
