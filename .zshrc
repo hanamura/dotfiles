@@ -13,6 +13,7 @@ plugins=(
   emoji-clock
   gem
   git
+  github
   go
   heroku
   npm
