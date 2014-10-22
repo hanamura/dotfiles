@@ -10,7 +10,6 @@ plugins=(
   brew
   bundler
   composer
-  emoji-clock
   gem
   git
   go
@@ -32,18 +31,31 @@ zstyle ':chpwd:*' recent-dirs-max 5000
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
-# User configuration
-# ==================
+# exports
+# =======
 
-# local zshrc
-if [ -r "$HOME/.zshrc.local.zsh" ] && [ -f "$HOME/.zshrc.local.zsh" ]; then
-  source "$HOME/.zshrc.local.zsh"
-fi
+# make unique
 
-# alias
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+typeset -U path PATH
+typeset -U cdpath CDPATH
+typeset -U fpath FPATH
+typeset -U manpath MANPATH
 
-# utilities
+export LANG=ja_JP.UTF-8
+export EDITOR=vim
+
+# homebrew
+
+path=(
+  /usr/local/bin(N-/)
+  ${path}
+)
+
+# aliases & functions
+# ===================
+
+# daily temporary directory
+
 function todaytmp() {
   local name=`date +"$HOME/temporary/%Y-%m-%d"`
 
@@ -56,19 +68,24 @@ function todaytmp() {
   fi
 }
 
-# peco
-# ====
+# ip
 
-# repositories
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+# peco - repositories
+
 alias peg='cd $(ghq list -p | peco)'
 
-# ssh hosts
+# peco - ssh hosts
+
 alias pes='ssh $(grep -iE "^host[[:space:]]+[^*]" ~/.ssh/config | peco | awk "{print \$2}") 2>/dev/null'
 
-# vagrant directories
+# peco - vagrant directories
+
 alias pev='cd $(ls -1 ~/vagrant | peco | awk "{ print ENVIRON[\"HOME\"] \"/vagrant/\" \$1 }")'
 
-# cdr + peco
+# peco - cdr
+
 function pec() {
   local dir=$(cdr -l | awk '{ print $2 }' | peco | sed "s;~;$HOME;")
   if [ -d $dir ]; then
@@ -78,73 +95,65 @@ function pec() {
   fi
 }
 
-# kill + peco
+# peco - kill
+
 alias pek='ps aux | tail -n +2 | peco | awk '"'"'{ print $2 }'"'"' | xargs kill'
 
 # hub
+
 if type hub >/dev/null 2>&1; then
   alias git=hub
   compdef hub=git
 fi
 
-# npm completion
-# ==============
+# completions
+# ===========
 
-COMP_WORDBREAKS=${COMP_WORDBREAKS/=/}
-COMP_WORDBREAKS=${COMP_WORDBREAKS/@/}
-export COMP_WORDBREAKS
-
-if type complete &>/dev/null; then
-  _npm_completion () {
-    local si="$IFS"
-    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$COMP_CWORD" \
-                           COMP_LINE="$COMP_LINE" \
-                           COMP_POINT="$COMP_POINT" \
-                           npm completion -- "${COMP_WORDS[@]}" \
-                           2>/dev/null)) || return $?
-    IFS="$si"
-  }
-  complete -F _npm_completion npm
-elif type compdef &>/dev/null; then
-  _npm_completion() {
-    si=$IFS
-    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
-                 COMP_LINE=$BUFFER \
-                 COMP_POINT=0 \
-                 npm completion -- "${words[@]}" \
-                 2>/dev/null)
-    IFS=$si
-  }
-  compdef _npm_completion npm
-elif type compctl &>/dev/null; then
-  _npm_completion () {
-    local cword line point words si
-    read -Ac words
-    read -cn cword
-    let cword-=1
-    read -l line
-    read -ln point
-    si="$IFS"
-    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
-                       COMP_LINE="$line" \
-                       COMP_POINT="$point" \
-                       npm completion -- "${words[@]}" \
-                       2>/dev/null)) || return $?
-    IFS="$si"
-  }
-  compctl -K _npm_completion npm
-fi
-
-# grunt completion
-# ================
+# grunt
 
 if type grunt >/dev/null 2>&1; then
   eval "$(grunt --completion=zsh)"
 fi
 
-# gulp completion
-# ===============
+# gulp
 
 if type gulp >/dev/null 2>&1; then
   eval "$(gulp --completion=zsh)"
+fi
+
+# nvm
+# ===
+
+export NVM_DIR="/Users/hanamura/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# rbenv
+# =====
+
+export RBENV_ROOT=/usr/local/var/rbenv
+
+if type rbenv >/dev/null 2>&1; then
+  eval "$(rbenv init -)"
+fi
+
+# golang
+# ======
+
+if type go >/dev/null 2>&1; then
+  typeset -xTU GOROOT goroot
+  typeset -xTU GOPATH gopath
+  goroot=`go env GOROOT`
+  gopath=(${HOME}/.go(N-/))
+  path=(
+    ${path}
+    ${GOROOT}/bin(N-/)
+    ${GOPATH}/bin(N-/)
+  )
+fi
+
+# local zshrc
+# ===========
+
+if [ -r "$HOME/.zshrc.local.zsh" ] && [ -f "$HOME/.zshrc.local.zsh" ]; then
+  source "$HOME/.zshrc.local.zsh"
 fi
