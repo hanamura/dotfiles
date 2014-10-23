@@ -106,21 +106,6 @@ if type hub >/dev/null 2>&1; then
   compdef hub=git
 fi
 
-# completions
-# ===========
-
-# grunt
-
-if type grunt >/dev/null 2>&1; then
-  eval "$(grunt --completion=zsh)"
-fi
-
-# gulp
-
-if type gulp >/dev/null 2>&1; then
-  eval "$(gulp --completion=zsh)"
-fi
-
 # nvm
 # ===
 
@@ -156,4 +141,19 @@ fi
 
 if [ -r "$HOME/.zshrc.local.zsh" ] && [ -f "$HOME/.zshrc.local.zsh" ]; then
   source "$HOME/.zshrc.local.zsh"
+fi
+
+# node completions (after `nvm use ...`)
+# ======================================
+
+# grunt
+
+if type grunt >/dev/null 2>&1; then
+  eval "$(grunt --completion=zsh)"
+fi
+
+# gulp
+
+if type gulp >/dev/null 2>&1; then
+  eval "$(gulp --completion=zsh)"
 fi
