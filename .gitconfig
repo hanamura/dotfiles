@@ -44,7 +44,3 @@
 
 [ghq]
   root = ~/.ghq
-
-[filter "media"]
-  clean = git-media filter-clean
-  smudge = git-media filter-smudge
