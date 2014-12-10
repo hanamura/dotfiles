@@ -74,6 +74,8 @@ __link() {
     ".zlogin"
     # atom
     ".atom"
+    # npm
+    ".npmrc"
   )
   for name in $names; do
     __link $repo/$name $HOME/$name
