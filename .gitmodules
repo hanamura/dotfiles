@@ -19,3 +19,6 @@
 [submodule ".atom/packages/monokai"]
 	path = .atom/packages/monokai
 	url = git@github.com:kevinsawicki/monokai.git
+[submodule ".atom/packages/japanese-wrap"]
+	path = .atom/packages/japanese-wrap
+	url = git@github.com:raccy/japanese-wrap.git
