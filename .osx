@@ -54,13 +54,6 @@ sudo pmset -b sleep 45
 sudo pmset -b disksleep 45
 sudo pmset -b displaysleep 45
 
-# boot
-# ====
-
-# Disable the sound effects on boot
-
-sudo nvram SystemAudioVolume=" "
-
 # finder
 # ======
 
