@@ -132,7 +132,7 @@ if type go >/dev/null 2>&1; then
   typeset -xTU GOROOT goroot
   typeset -xTU GOPATH gopath
   goroot=`go env GOROOT`
-  gopath=(${HOME}/.go(N-/))
+  gopath=$HOME/.go
   path=(
     ${path}
     ${GOROOT}/bin(N-/)
