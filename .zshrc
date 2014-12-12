@@ -72,6 +72,10 @@ function todaytmp() {
 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+# serve
+
+alias serve="python -m SimpleHTTPServer"
+
 # peco - repositories
 
 alias peg='cd $(ghq list -p | peco)'
