@@ -22,3 +22,6 @@
 [submodule ".atom/packages/japanese-wrap"]
 	path = .atom/packages/japanese-wrap
 	url = git@github.com:raccy/japanese-wrap.git
+[submodule ".atom/packages/go-plus"]
+	path = .atom/packages/go-plus
+	url = git@github.com:joefitzgerald/go-plus.git
