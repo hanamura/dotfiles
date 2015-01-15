@@ -1,16 +1,17 @@
-'global':
-  'editor':
-    'fontSize': 12
-    'fontFamily': 'Andale Mono'
-    'invisibles': {}
-  'welcome':
-    'showOnStartup': false
-  'exception-reporting':
-    'userId': '52b9dc38-c187-c5a4-8dbb-5ffcbeeff4f0'
-  'metrics':
-    'userId': 'aa9be245d4b92d0e2474923f7792c48f57643950'
-  'autocomplete':
-    'includeCompletionsFromAllBuffers': true
-  'autocomplete-plus':
-    'includeCompletionsFromAllBuffers': true
-  'core': {}
+"*":
+  editor:
+    fontFamily: "Andale Mono"
+    fontSize: 12
+    invisibles: {}
+  welcome:
+    showOnStartup: false
+  "exception-reporting":
+    userId: "52b9dc38-c187-c5a4-8dbb-5ffcbeeff4f0"
+  metrics:
+    userId: "aa9be245d4b92d0e2474923f7792c48f57643950"
+  autocomplete:
+    includeCompletionsFromAllBuffers: true
+  "autocomplete-plus":
+    includeCompletionsFromAllBuffers: true
+  core: {}
+  "go-plus": {}
