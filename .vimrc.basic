@@ -100,3 +100,9 @@ augroup vagrant
   autocmd!
   autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 augroup END
+
+" go
+augroup golang
+  autocmd!
+  autocmd FileType go autocmd BufWritePre <buffer> Fmt
+augroup END
