@@ -105,4 +105,5 @@ augroup END
 augroup golang
   autocmd!
   autocmd FileType go autocmd BufWritePre <buffer> Fmt
+  autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4 nolist
 augroup END
