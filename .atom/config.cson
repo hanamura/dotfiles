@@ -15,3 +15,6 @@
     includeCompletionsFromAllBuffers: true
   core: {}
   "go-plus": {}
+  "japanese-wrap":
+    characterWidth: {}
+    lineBreakingRule: {}
