@@ -10,18 +10,3 @@
 [submodule "sketch/Content Generator"]
 	path = sketch/Content Generator
 	url = git@github.com:timuric/Content-generator-sketch-plugin.git
-[submodule ".atom/packages/color-picker"]
-	path = .atom/packages/color-picker
-	url = git@github.com:thomaslindstrom/color-picker.git
-[submodule ".atom/packages/autocomplete-plus"]
-	path = .atom/packages/autocomplete-plus
-	url = git@github.com:saschagehlich/autocomplete-plus.git
-[submodule ".atom/packages/monokai"]
-	path = .atom/packages/monokai
-	url = git@github.com:kevinsawicki/monokai.git
-[submodule ".atom/packages/japanese-wrap"]
-	path = .atom/packages/japanese-wrap
-	url = git@github.com:raccy/japanese-wrap.git
-[submodule ".atom/packages/go-plus"]
-	path = .atom/packages/go-plus
-	url = git@github.com:joefitzgerald/go-plus.git
