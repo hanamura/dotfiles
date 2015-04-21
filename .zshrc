@@ -15,6 +15,7 @@ plugins=(
   go
   heroku
   npm
+  nvm
   osx
   ruby
   vagrant
