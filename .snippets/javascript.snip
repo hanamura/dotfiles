@@ -12,3 +12,12 @@ snippet     fna
 abbr        fna
 options     word
   ${1:($\{2\})} => ${3:\{$\{4\}\}}
+
+snippet     class
+abbr        class
+options     word
+  class ${1} ${2:extends $\{3\} }{
+    constructor(${4}) {
+      ${5}
+    }
+  }
