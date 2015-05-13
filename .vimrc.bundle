@@ -25,17 +25,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kana/vim-textobj-line'
 NeoBundle 'kana/vim-textobj-entire'
-NeoBundle 'kana/vim-textobj-function'
 NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'kana/vim-smartword'
-NeoBundle 'thinca/vim-textobj-function-javascript'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'terryma/vim-expand-region'
 
 " completion
 NeoBundle 'Shougo/neocomplete'
@@ -47,7 +43,6 @@ NeoBundle 'thinca/vim-quickrun'
 
 " syntax
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'groenewege/vim-less'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'evidens/vim-twig'
 
@@ -72,11 +67,6 @@ NeoBundle 'mattn/ctrlp-ghq'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
-
-" unite
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
 
 " go
 NeoBundle 'vim-jp/vim-go-extra'

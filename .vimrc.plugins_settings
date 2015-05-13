@@ -38,17 +38,6 @@ if has('conceal')
 endif
 let g:neosnippet#snippets_directory='~/.snippets'
 
-" autoclose
-" =========
-let g:autoclose_vim_commentmode=1
-
-" unite
-" =====
-nnoremap <silent> <Leader>ff :<C-u>Unite<Space>file<CR>
-nnoremap <silent> <Leader>fb :<C-u>Unite<Space>buffer<CR>
-nnoremap <silent> <Leader>fs :<C-u>Unite<Space>source<CR>
-nnoremap <silent> <Leader>fr :<C-u>Unite<Space>file_mru<CR>
-
 " markdown
 " ========
 let g:markdown_fenced_languages=[
@@ -154,42 +143,3 @@ omap / <Plug>(easymotion-tn)
 nnoremap g/ /
 map f <Plug>(easymotion-bd-fl)
 map t <Plug>(easymotion-bd-tl)
-
-" expandregion
-" ============
-let g:expand_region_text_objects={
-      \ 'iw'  : 0,
-      \ 'iW'  : 0,
-      \ 'i"'  : 0,
-      \ 'a"'  : 0,
-      \ 'i''' : 0,
-      \ 'a''' : 0,
-      \ 'i]'  : 1,
-      \ 'a]'  : 1,
-      \ 'ib'  : 1,
-      \ 'ab'  : 1,
-      \ 'iB'  : 1,
-      \ 'aB'  : 1,
-      \ 'il'  : 0,
-      \ 'ip'  : 0,
-      \ 'ie'  : 0,
-      \ }
-let g:expand_region_text_objects_php={
-      \ 'iw'  : 0,
-      \ 'iW'  : 0,
-      \ 'i"'  : 0,
-      \ 'a"'  : 0,
-      \ 'i''' : 0,
-      \ 'a''' : 0,
-      \ 'i]'  : 1,
-      \ 'a]'  : 1,
-      \ 'ib'  : 1,
-      \ 'ab'  : 1,
-      \ 'iB'  : 1,
-      \ 'aB'  : 1,
-      \ 'il'  : 0,
-      \ 'ip'  : 0,
-      \ 'ie'  : 0,
-      \ 'it'  : 1,
-      \ 'at'  : 1,
-      \ }
