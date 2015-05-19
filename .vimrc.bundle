@@ -45,6 +45,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'evidens/vim-twig'
+NeoBundle 'elzr/vim-json'
 
 " utility
 NeoBundle 'scrooloose/nerdtree'

@@ -143,3 +143,7 @@ omap / <Plug>(easymotion-tn)
 nnoremap g/ /
 map f <Plug>(easymotion-bd-fl)
 map t <Plug>(easymotion-bd-tl)
+
+" vim-json
+" ========
+let g:vim_json_syntax_conceal=0
