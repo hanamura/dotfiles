@@ -2,7 +2,8 @@
   editor:
     fontFamily: "Andale Mono"
     fontSize: 12
-    invisibles: {}
+    invisibles:
+      {}
   welcome:
     showOnStartup: false
   "exception-reporting":
@@ -18,7 +19,10 @@
       "seti-ui"
       "seti-syntax"
     ]
-  "go-plus": {}
+  "go-plus":
+    {}
   "japanese-wrap":
-    characterWidth: {}
-    lineBreakingRule: {}
+    characterWidth:
+      {}
+    lineBreakingRule:
+      {}
