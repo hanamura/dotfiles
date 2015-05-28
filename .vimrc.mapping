@@ -41,3 +41,7 @@ nnoremap <Leader>p "*p
 vnoremap <Leader>p "*p
 nnoremap <Leader>P "*P
 vnoremap <Leader>P "*P
+
+" escape
+noremap <C-j> <Esc>
+noremap! <C-j> <Esc>
