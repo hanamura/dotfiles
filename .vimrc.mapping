@@ -45,3 +45,7 @@ vnoremap <Leader>P "*P
 " escape
 noremap <C-j> <Esc>
 noremap! <C-j> <Esc>
+
+" numpad
+noremap <k0> ^
+noremap <k1> $
