@@ -48,3 +48,7 @@ noremap! <C-j> <Esc>
 " numpad
 noremap <k0> ^
 noremap <k1> $
+
+" forbid C-c to correct a bad habit
+noremap <C-c> <Nop>
+noremap! <C-c> <Nop>
