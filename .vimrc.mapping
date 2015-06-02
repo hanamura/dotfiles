@@ -27,6 +27,7 @@ vnoremap <silent> gk k
 
 " nohighlight
 nnoremap <Esc><Esc> :noh<CR>
+nnoremap <C-j><C-j> :noh<CR>
 
 " 0
 nnoremap <silent> 0 ^
