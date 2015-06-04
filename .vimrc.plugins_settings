@@ -78,7 +78,8 @@ let g:ctrlp_map='<C-l>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_extensions=[
-      \ 'dir',
+      \ 'register',
+      \ 'filetype',
       \ 'line',
       \ 'ghq',
       \ ]
