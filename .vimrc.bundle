@@ -64,6 +64,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'mattn/ctrlp-ghq'
 NeoBundle 'endel/ctrlp-filetype.vim'
+NeoBundle 'mattn/ctrlp-register'
 
 " colorschemes
 NeoBundle 'flazz/vim-colorschemes'
