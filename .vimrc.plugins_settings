@@ -103,12 +103,10 @@ let g:ctrlp_custom_ignore={
 
 " tabular
 " =======
-nnoremap <Leader>a= :Tabularize /=<CR>
-vnoremap <Leader>a= :Tabularize /=<CR>
-nnoremap <Leader>a: :Tabularize /,\zs/l0c1<CR>
-vnoremap <Leader>a: :Tabularize /,\zs/l0c1<CR>
-nnoremap <Leader>a: :Tabularize /:\zs/l0c1<CR>
-vnoremap <Leader>a: :Tabularize /:\zs/l0c1<CR>
+nnoremap <Leader>a= :Tabularize /^[^=]*\s\zs=\ze\s<CR>
+vnoremap <Leader>a= :Tabularize /^[^=]*\s\zs=\ze\s<CR>
+nnoremap <Leader>a: :Tabularize /^[^:]*:\zs/l0c1<CR>
+vnoremap <Leader>a: :Tabularize /^[^:]*:\zs/l0c1<CR>
 nnoremap <Leader>a> :Tabularize /^[^=]*\zs=><CR>
 vnoremap <Leader>a> :Tabularize /^[^=]*\zs=><CR>
 
