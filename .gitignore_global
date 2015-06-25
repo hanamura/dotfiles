@@ -15,3 +15,6 @@ Thumbs.db
 
 # node
 node_modules/
+
+# others
+.sass-cache/
