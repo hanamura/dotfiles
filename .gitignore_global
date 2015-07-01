@@ -15,6 +15,7 @@ Thumbs.db
 
 # node
 node_modules/
+npm-debug.log
 
 # others
 .sass-cache/
