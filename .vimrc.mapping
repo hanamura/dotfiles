@@ -53,3 +53,6 @@ noremap <k1> $
 " forbid C-c to correct a bad habit
 noremap <C-c> <Nop>
 noremap! <C-c> <Nop>
+
+" http://postd.cc/how-to-boost-your-vim-productivity/
+nnoremap <Leader>w :w<CR>
