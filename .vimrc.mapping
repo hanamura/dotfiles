@@ -1,5 +1,8 @@
 " references:
 " - https://github.com/yuroyoro/dotfiles/blob/master/.vimrc.moving
+" - http://postd.cc/how-to-boost-your-vim-productivity/
+" - http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca
+" - http://deris.hatenablog.jp/entry/2013/05/02/192415
 
 " emacs-like
 no <C-e> <End>
@@ -54,5 +57,6 @@ noremap <k1> $
 noremap <C-c> <Nop>
 noremap! <C-c> <Nop>
 
-" http://postd.cc/how-to-boost-your-vim-productivity/
+" productivity
 nnoremap <Leader>w :w<CR>
+nnoremap ; :
