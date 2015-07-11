@@ -24,6 +24,7 @@ plugins=(
   osx
   ruby
   vagrant
+  wp-cli
 )
 
 source $ZSH/oh-my-zsh.sh
