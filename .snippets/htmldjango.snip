@@ -1,0 +1,50 @@
+snippet     %
+abbr        %
+options     word
+  {% ${1} %}
+
+snippet     %%
+abbr        %%
+options     word
+  {% ${1:tag} %}
+  ${2}
+  {% end$1 %}
+
+snippet     #
+abbr        #
+options     word
+  {# ${1} #}
+
+snippet     if
+abbr        if
+options     word
+  {% if ${1} %}
+  ${2}
+  {% endif %}
+
+snippet     elif
+abbr        elif
+options     word
+  {% elif ${1} %}
+
+snippet     for
+abbr        for
+options     word
+  {% for ${1} in ${2} %}
+  ${3}
+  {% endfor %}
+
+snippet     block
+abbr        block
+options     word
+  {% block ${1} %}${2}{% endblock %}
+
+snippet     include
+abbr        include
+options     head
+  {% include '${1}' %}
+
+snippet     extends
+abbr        extends
+options     head
+  {% extends '${1}' %}
