@@ -58,7 +58,7 @@ NeoBundle 'Shougo/vimproc', {
       \   'unix':    'make -f make_unix.mak',
       \   }
       \ }
-NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-fugitive'
