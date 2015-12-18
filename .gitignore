@@ -1,4 +1,5 @@
 /.atom/.apm
+/.atom/blob-store
 /.atom/packages
 /.vim/bundle/*
 !/.vim/bundle/neobundle.vim
