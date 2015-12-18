@@ -17,7 +17,9 @@ plugins=(
   composer
   gem
   git
+  github
   go
+  gulp
   heroku
   npm
   nvm
