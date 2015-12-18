@@ -80,17 +80,6 @@ __link() {
   for name in $names; do
     __link $repo/$name $HOME/$name
   done
-
-  # sketch 3 plugins
-  echo $fg[cyan]"sync sketch plugins:"$fg[default]
-  rsync \
-    --archive \
-    --verbose \
-    --delete \
-    --checksum \
-    --exclude=".git" \
-    "$repo/sketch/" \
-    "$HOME/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application Support/com.bohemiancoding.sketch3/Plugins/"
 }
 
 unset repo
