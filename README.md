@@ -16,13 +16,13 @@
 ```sh
 $ git clone git@github.com:hanamura/dotfiles.git
 $ cd dotfiles
-$ . ./init.zsh
+$ ./init.zsh
 ```
 
 ### Update
 
 ```sh
-$ . ./init.zsh
+$ ./init.zsh
 ```
 
 ## References
