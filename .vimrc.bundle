@@ -42,9 +42,6 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'thinca/vim-quickrun'
 
 " syntax
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'evidens/vim-twig'
 NeoBundle 'elzr/vim-json'
 
 " utility
