@@ -41,7 +41,6 @@ let g:neosnippet#snippets_directory='~/.snippets'
 " markdown
 " ========
 let g:markdown_fenced_languages=[
-      \ 'coffee',
       \ 'css',
       \ 'javascript',
       \ 'js=javascript',
