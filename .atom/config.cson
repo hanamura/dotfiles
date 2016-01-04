@@ -22,3 +22,5 @@
   "japanese-wrap":
     characterWidth: {}
     lineBreakingRule: {}
+  "markdown-preview":
+    useGitHubStyle: true
