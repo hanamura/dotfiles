@@ -4,7 +4,7 @@
 
 ## Environment
 
-- OS: Mac OS X
+- OS: OS X
 - Package Manager: Homebrew
 - Shell: zsh with oh-my-zsh
 - Editor: Vim, MacVim, Atom
