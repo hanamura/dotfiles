@@ -44,6 +44,7 @@ NeoBundle 'thinca/vim-quickrun'
 " syntax
 NeoBundle 'elzr/vim-json'
 NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'digitaltoad/vim-pug'
 
 " utility
 NeoBundle 'scrooloose/nerdtree'
