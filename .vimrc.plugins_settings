@@ -66,6 +66,7 @@ let g:NERDTreeIgnore=[
       \ '^bower_components$[[dir]]',
       \ '^node_modules$[[dir]]',
       \ '^.DS_Store$[[file]]',
+      \ '^.gitmodules$[[file]]',
       \ '.lock$[[file]]',
       \ '.sublime-project$[[file]]',
       \ '.sublime-workspace$[[file]]',
