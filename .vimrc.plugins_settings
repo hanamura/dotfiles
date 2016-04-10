@@ -68,8 +68,6 @@ let g:NERDTreeIgnore=[
       \ '^.DS_Store$[[file]]',
       \ '^.gitmodules$[[file]]',
       \ '.lock$[[file]]',
-      \ '.sublime-project$[[file]]',
-      \ '.sublime-workspace$[[file]]',
       \ ]
 
 " ctrlp
