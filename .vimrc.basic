@@ -114,4 +114,9 @@ augroup quickfix
   autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
+augroup jinja
+  autocmd!
+  autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
+augroup END
+
 let mapleader=" "
