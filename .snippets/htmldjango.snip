@@ -48,3 +48,17 @@ snippet     extends
 abbr        extends
 options     head
   {% extends '${1}' %}
+
+snippet     macro
+abbr        macro
+options     head
+  {% macro ${1} %}
+  ${2}
+  {% endmacro %}
+
+snippet     call
+abbr        call
+options     head
+  {% call ${1} %}
+  ${2}
+  {% endcall %}
