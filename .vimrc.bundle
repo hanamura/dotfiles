@@ -47,6 +47,7 @@ NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'othree/yajs.vim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'jwalton512/vim-blade'
 
 " utility
 NeoBundle 'scrooloose/nerdtree'
