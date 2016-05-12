@@ -99,6 +99,7 @@ let g:ctrlp_custom_ignore={
       \ 'dir':  '\v[\/](\.(git|hg|svn|sass-cache|jekyll)|node_modules|bower_components|wp-content)$',
       \ 'file': '\v\.(DS_Store|lock)$',
       \ }
+let g:ctrlp_max_files=30000
 
 " tabular
 " =======
