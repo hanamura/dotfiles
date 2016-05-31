@@ -117,6 +117,7 @@ augroup END
 augroup jinja
   autocmd!
   autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
+  autocmd BufRead,BufNewFile *.nunj set filetype=htmldjango
 augroup END
 
 let mapleader=" "
