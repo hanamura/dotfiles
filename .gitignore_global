@@ -22,3 +22,7 @@ npm-debug.log
 
 # vcs
 .svn/
+
+# local.vimrc
+.local.vimrc
+.local.*.vimrc
