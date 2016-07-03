@@ -69,6 +69,7 @@ NeoBundle 'mattn/ctrlp-register'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'thinca/vim-localrc'
+NeoBundle 'editorconfig/editorconfig-vim'
 
 " colorschemes
 NeoBundle 'flazz/vim-colorschemes'
