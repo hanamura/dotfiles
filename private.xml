@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Keypad with space</name>
+    <appendix>space-789: 789</appendix>
+    <appendix>space-UIO: 456</appendix>
+    <appendix>space-JKL: 123</appendix>
+    <appendix>space-M: 0</appendix>
+    <appendix></appendix>
+    <appendix>space-0: /</appendix>
+    <appendix>space-P: *</appendix>
+    <appendix>space-;: -</appendix>
+    <appendix>space-/: +</appendix>
+    <appendix>space--: =</appendix>
+    <identifier>private.keypad_with_space</identifier>
+    <autogen>
+      __KeyOverlaidModifier__
+      KeyCode::SPACE, ModifierFlag::NONE,
+      @begin
+      KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_keypad_with_space,
+      @end
+      @begin
+      KeyCode::SPACE,
+      @end
+    </autogen>
+  </item>
+  <item hidden="true">
+    <identifier vk_config="true">keypad_with_space</identifier>
+    <autogen>
+      __BlockUntilKeyUp__ KeyCode::SPACE
+    </autogen>
+    <autogen>__KeyToKey__ KeyCode::M, KeyCode::KEYPAD_0</autogen>
+    <autogen>__KeyToKey__ KeyCode::J, KeyCode::KEYPAD_1</autogen>
+    <autogen>__KeyToKey__ KeyCode::K, KeyCode::KEYPAD_2</autogen>
+    <autogen>__KeyToKey__ KeyCode::L, KeyCode::KEYPAD_3</autogen>
+    <autogen>__KeyToKey__ KeyCode::U, KeyCode::KEYPAD_4</autogen>
+    <autogen>__KeyToKey__ KeyCode::I, KeyCode::KEYPAD_5</autogen>
+    <autogen>__KeyToKey__ KeyCode::O, KeyCode::KEYPAD_6</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_7, KeyCode::KEYPAD_7</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_8, KeyCode::KEYPAD_8</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_9, KeyCode::KEYPAD_9</autogen>
+    <autogen>__KeyToKey__ KeyCode::P, KeyCode::KEYPAD_MULTIPLY</autogen>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::KEYPAD_MINUS</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::KEYPAD_SLASH</autogen>
+    <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::KEYPAD_PLUS</autogen>
+    <autogen>__KeyToKey__ KeyCode::MINUS, KeyCode::KEYPAD_EQUAL</autogen>
+  </item>
+</root>
