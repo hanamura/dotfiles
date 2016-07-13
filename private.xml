@@ -1,33 +1,33 @@
 <?xml version="1.0"?>
 <root>
   <item>
-    <name>Keypad with space</name>
-    <appendix>space-789: 789</appendix>
-    <appendix>space-UIO: 456</appendix>
-    <appendix>space-JKL: 123</appendix>
-    <appendix>space-M: 0</appendix>
+    <name>Keypad with z</name>
+    <appendix>z-789: 789</appendix>
+    <appendix>z-UIO: 456</appendix>
+    <appendix>z-JKL: 123</appendix>
+    <appendix>z-M: 0</appendix>
     <appendix></appendix>
-    <appendix>space-0: /</appendix>
-    <appendix>space-P: *</appendix>
-    <appendix>space-;: -</appendix>
-    <appendix>space-/: +</appendix>
-    <appendix>space--: =</appendix>
-    <identifier>private.keypad_with_space</identifier>
+    <appendix>z-0: /</appendix>
+    <appendix>z-P: *</appendix>
+    <appendix>z-;: -</appendix>
+    <appendix>z-/: +</appendix>
+    <appendix>z--: =</appendix>
+    <identifier>private.keypad_with_z</identifier>
     <autogen>
       __KeyOverlaidModifier__
-      KeyCode::SPACE, ModifierFlag::NONE,
+      KeyCode::Z, ModifierFlag::NONE,
       @begin
-      KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_keypad_with_space,
+      KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_keypad_with_z,
       @end
       @begin
-      KeyCode::SPACE,
+      KeyCode::Z,
       @end
     </autogen>
   </item>
   <item hidden="true">
-    <identifier vk_config="true">keypad_with_space</identifier>
+    <identifier vk_config="true">keypad_with_z</identifier>
     <autogen>
-      __BlockUntilKeyUp__ KeyCode::SPACE
+      __BlockUntilKeyUp__ KeyCode::Z
     </autogen>
     <autogen>__KeyToKey__ KeyCode::M, KeyCode::KEYPAD_0</autogen>
     <autogen>__KeyToKey__ KeyCode::J, KeyCode::KEYPAD_1</autogen>
