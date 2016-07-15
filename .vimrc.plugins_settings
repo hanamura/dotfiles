@@ -69,8 +69,8 @@ let g:NERDTreeIgnore=[
       \ '^.DS_Store$[[file]]',
       \ '^.gitmodules$[[file]]',
       \ '.lock$[[file]]',
-      \ '.local.vimrc$[[file]]',
-      \ '.local.*.vimrc$[[file]]',
+      \ '^.local.vimrc$[[file]]',
+      \ '^.local.*.vimrc$[[file]]',
       \ '^npm-debug.log$[[file]]',
       \ ]
 
