@@ -11,7 +11,6 @@ else
 fi
 
 plugins=(
-  bower
   brew
   bundler
   composer
