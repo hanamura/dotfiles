@@ -74,6 +74,9 @@ __link() {
 
   # atom
   __link $repo/.atom $HOME/.atom
+
+  # karabiner
+  __link $repo/private.xml "$HOME/Library/Application Support/Karabiner/private.xml"
 }
 
 unset repo
