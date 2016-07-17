@@ -14,15 +14,18 @@
 ### Setup
 
 ```sh
-$ git clone git@github.com:hanamura/dotfiles.git
+$ git clone --recursive git@github.com:hanamura/dotfiles.git
 $ cd dotfiles
-$ ./init.zsh
+$ ./link.zsh
 ```
 
 ### Update
 
 ```sh
-$ ./init.zsh
+$ git pull origin master
+$ git submodule init
+$ git submodule update
+$ ./link.zsh
 ```
 
 ## References
