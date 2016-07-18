@@ -27,6 +27,16 @@ abbr        elif
 options     word
   {% elif ${1} %}
 
+snippet     elseif
+abbr        elseif
+options     word
+  {% elseif ${1} %}
+
+snippet     else
+abbr        else
+options     word
+  {% else %}
+
 snippet     for
 abbr        for
 options     word
@@ -48,6 +58,11 @@ snippet     extends
 abbr        extends
 options     head
   {% extends '${1}' %}
+
+snippet     set
+abbr        set
+options     word
+  {% set ${1} = ${2} %}
 
 snippet     macro
 abbr        macro
