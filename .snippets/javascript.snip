@@ -1,17 +1,22 @@
 snippet     fn
 abbr        fn
 options     word
+  ${1:($\{2\})} => ${3:\{$\{4\}\}}
+
+snippet     fna
+abbr        fna
+options     word
+  ${1:($\{2\})} => ${3:\{$\{4\}\}}
+
+snippet     fun
+abbr        fun
+options     word
   function(${1}) {${2}}
 
 snippet     log
 abbr        log
 options     word
   console.log(${1})
-
-snippet     fna
-abbr        fna
-options     word
-  ${1:($\{2\})} => ${3:\{$\{4\}\}}
 
 snippet     class
 abbr        class
