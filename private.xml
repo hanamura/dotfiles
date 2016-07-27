@@ -81,6 +81,7 @@
     <autogen>__KeyToKey__ KeyCode::KEY_0, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::KEYPAD_SLASH</autogen>
     <autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::KEYPAD_PLUS</autogen>
     <autogen>__KeyToKey__ KeyCode::MINUS, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::KEYPAD_EQUAL</autogen>
+    <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::KEYPAD_DOT</autogen>
   </item>
 
 </root>
