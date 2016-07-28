@@ -169,3 +169,10 @@ fi
 if type gulp >/dev/null 2>&1; then
   eval "$(gulp --completion=zsh)"
 fi
+
+# Let <C-s> work in terminal vim
+# https://github.com/kien/ctrlp.vim/issues/359
+# https://stackoverflow.com/questions/8616843/ctrl-s-is-not-working-as-a-horizontal-split-in-vim-when-using-commandt
+# ==============================
+
+stty -ixon -ixoff
