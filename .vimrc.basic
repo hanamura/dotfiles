@@ -114,6 +114,7 @@ augroup quickfix
   autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
+" jinja
 augroup jinja
   autocmd!
   autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
