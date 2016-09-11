@@ -70,6 +70,9 @@ set viminfo='50,<1000,s100,\"50
 set modeline
 set modelines=5
 
+" cursorline
+set cursorline
+
 " clipboard
 set clipboard=
 
