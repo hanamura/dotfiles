@@ -153,3 +153,7 @@ map t <Plug>(easymotion-bd-tl)
 " vim-json
 " ========
 let g:vim_json_syntax_conceal=0
+
+" emmet
+" =====
+let g:user_emmet_leader_key='<c-k>'
