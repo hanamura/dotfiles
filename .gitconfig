@@ -43,6 +43,7 @@
   default = simple
 
 [ghq]
+  root = ~/ghq
   root = ~/.ghq
   root = ~/.go/src
 
