@@ -66,14 +66,8 @@ path=(
 
 function todaytmp() {
   local name=`date +"$HOME/temporary/%Y-%m-%d"`
-
-  [ -e $name ] || mkdir -p $name
-
-  if [[ $1 = 'open' ]]; then
-    open $name
-  else
-    cd $name
-  fi
+  mkdir -p $name
+  cd $name
 }
 
 # ip
