@@ -86,7 +86,6 @@ let g:ctrlp_extensions=[
       \ 'ghq',
       \ ]
 let g:ctrlp_show_hidden=1
-let g:ctrlp_use_migemo=1
 let g:ctrlp_prompt_mappings={
       \ 'PrtSelectMove("j")':   ['<c-n>', '<c-j>', '<down>'],
       \ 'PrtSelectMove("k")':   ['<c-p>', '<c-k>', '<up>'],
