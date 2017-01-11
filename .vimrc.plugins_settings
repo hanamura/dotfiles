@@ -102,6 +102,7 @@ let g:ctrlp_custom_ignore={
       \ 'file': '\v\.(DS_Store|eot|gif|ico|lock|jar|jpeg|jpg|png|sqlite|swf|ttf|webp|woff|woff2|zip)$',
       \ }
 let g:ctrlp_max_files=30000
+let g:ctrlp_user_command=['.git', 'cd %s && git ls-files', 'find %s -type f']
 
 " tabular
 " =======
