@@ -123,6 +123,7 @@ augroup jinja
   autocmd!
   autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
   autocmd BufRead,BufNewFile *.nunj set filetype=htmldjango
+  autocmd BufRead,BufNewFile *.njk set filetype=htmldjango
 augroup END
 
 " http://vim-jp.org/vim-users-jp/2011/03/12/Hack-206.html
