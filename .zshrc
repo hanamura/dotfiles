@@ -152,12 +152,6 @@ fi
 # node completions (after `nvm use ...`)
 # ======================================
 
-# grunt
-
-if type grunt >/dev/null 2>&1; then
-  eval "$(grunt --completion=zsh)"
-fi
-
 # gulp
 
 if type gulp >/dev/null 2>&1; then
