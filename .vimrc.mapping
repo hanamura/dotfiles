@@ -60,6 +60,8 @@ noremap! <C-c> <Nop>
 " productivity
 nnoremap <Leader>w :w<CR>
 nnoremap ; :
+vnoremap ; :
 
 " command line window
 nnoremap : q:a
+vnoremap : q:a
