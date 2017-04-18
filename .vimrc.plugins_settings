@@ -66,6 +66,7 @@ let g:NERDTreeIgnore=[
       \ '^.vagrant$[[dir]]',
       \ '^bower_components$[[dir]]',
       \ '^node_modules$[[dir]]',
+      \ '^vendor$[[dir]]',
       \ '.lock$[[file]]',
       \ '^.DS_Store$[[file]]',
       \ '^.gitmodules$[[file]]',
