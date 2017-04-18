@@ -33,6 +33,7 @@ NeoBundle 'kana/vim-smartword'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'w0rp/ale'
 
 " completion
 NeoBundle 'Shougo/neocomplete'

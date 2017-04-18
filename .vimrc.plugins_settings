@@ -161,3 +161,10 @@ let g:vim_json_syntax_conceal=0
 " emmet
 " =====
 let g:user_emmet_leader_key='<c-k>'
+
+" ale
+" ===
+
+let g:ale_linters={
+      \ 'javascript': ['standard'],
+      \ }
