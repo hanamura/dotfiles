@@ -50,6 +50,7 @@ NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'othree/yajs.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jwalton512/vim-blade'
+NeoBundle 'posva/vim-vue'
 
 " utility
 NeoBundle 'scrooloose/nerdtree'
