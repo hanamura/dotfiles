@@ -132,4 +132,9 @@ augroup checktime
   autocmd WinEnter * checktime
 augroup END
 
+augroup filetypes
+  autocmd!
+  autocmd BufNewFile,BufRead .babelrc setlocal filetype=json
+augroup END
+
 let mapleader=" "
