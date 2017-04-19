@@ -135,6 +135,7 @@ augroup END
 augroup filetypes
   autocmd!
   autocmd BufNewFile,BufRead .babelrc setlocal filetype=json
+  autocmd BufNewFile,BufRead .stylelintrc setlocal filetype=json
 augroup END
 
 let mapleader=" "
