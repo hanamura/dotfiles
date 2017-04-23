@@ -48,6 +48,9 @@ __link() {
 }
 
 () {
+  # javascript
+  __link $repo/.eslintrc $HOME/.eslintrc
+
   # ruby
   __link $repo/.gemrc $HOME/.gemrc
 

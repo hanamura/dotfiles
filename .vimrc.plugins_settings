@@ -168,7 +168,7 @@ let g:user_emmet_leader_key='<c-k>'
 
 let g:ale_lint_on_text_changed='never'
 let g:ale_linters={
-      \ 'javascript': ['standard'],
+      \ 'javascript': ['eslint'],
       \ 'scss': ['stylelint'],
       \ 'vue': [],
       \ }
