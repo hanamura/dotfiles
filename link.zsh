@@ -48,6 +48,9 @@ __link() {
 }
 
 () {
+  # editorconfig
+  __link $repo/.editorconfig $HOME/.editorconfig
+
   # javascript
   __link $repo/.eslintrc $HOME/.eslintrc
 
