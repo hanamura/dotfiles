@@ -73,6 +73,7 @@ let g:NERDTreeIgnore=[
       \ '^.local.*.vimrc$[[file]]',
       \ '^.local.vimrc$[[file]]',
       \ '^npm-debug.log$[[file]]',
+      \ '^selenium-debug.log$[[file]]',
       \ ]
 
 " ctrlp
