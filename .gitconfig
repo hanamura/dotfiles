@@ -11,6 +11,7 @@
   branches = branch -a
   remotes = remote -v
   chardiff = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
+  pr = pull-request
 
 [core]
   excludesfile = ~/.gitignore_global
