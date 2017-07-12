@@ -86,10 +86,6 @@ alias peg='cd $(ghq list -p | peco)'
 
 alias pes='ssh $(grep -iE "^host[[:space:]]+[^*]" ~/.ssh/config | peco | awk "{print \$2}") 2>/dev/null'
 
-# peco - vagrant directories
-
-alias pev='cd $(ls -1 ~/vagrant | peco | awk "{ print ENVIRON[\"HOME\"] \"/vagrant/\" \$1 }")'
-
 # peco - cdr
 
 function pec() {
