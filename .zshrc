@@ -108,6 +108,11 @@ if type hub >/dev/null 2>&1; then
   compdef hub=git
 fi
 
+# html_escape
+# html-minifier is npm module
+
+alias html_escape="html-minifier | php -r \"echo htmlspecialchars(stream_get_contents(STDIN));\""
+
 # nvm
 # ===
 
