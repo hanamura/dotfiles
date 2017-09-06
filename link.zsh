@@ -83,6 +83,9 @@ __link() {
 
   # karabiner
   __link $repo/private.xml "$HOME/Library/Application Support/Karabiner/private.xml"
+
+  # tig
+  __link $repo/.tigrc $HOME/.tigrc
 }
 
 unset repo
