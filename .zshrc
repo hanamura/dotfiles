@@ -70,6 +70,11 @@ function todaytmp() {
   cd $name
 }
 
+# tig
+
+alias t="tig"
+alias ta="tig --all"
+
 # ip
 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
