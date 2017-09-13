@@ -5,4 +5,6 @@ bind main H ?git reset --hard %(commit)
 bind diff H ?git reset --hard %(commit)
 bind refs H ?git reset --hard %(branch)
 
+bind status D ?rm %(file)
+
 set status-show-untracked-files = yes
