@@ -7,6 +7,8 @@ bind refs R ?git rebase -i %(branch)
 bind main H ?git reset --hard %(commit)
 bind refs H ?git reset --hard %(branch)
 
+bind refs D ?git branch -d %(branch)
+
 bind status D ?rm %(file)
 
 set status-show-untracked-files = yes
