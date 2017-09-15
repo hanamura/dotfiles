@@ -25,6 +25,11 @@ bind generic U ?git push -u %(remote) %(repo:head)
 
 bind generic P ?git pull %(remote)
 
+# fetch
+
+bind generic F ?git fetch %(remote) --all --prune
+bind main    F ?git fetch %(remote) --all --prune
+
 # rm
 
 bind status D ?rm %(file)
