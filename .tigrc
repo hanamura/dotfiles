@@ -11,4 +11,6 @@ bind refs D ?git branch -d %(branch)
 
 bind status D ?rm %(file)
 
+bind generic P ?git push -u %(remote) %(repo:head)
+
 set status-show-untracked-files = yes
