@@ -1,16 +1,30 @@
+# merge
+
 bind main M ?git merge %(branch) --no-ff
 bind refs M ?git merge %(branch) --no-ff
+
+# rebase
 
 bind main R ?git rebase -i %(branch)
 bind refs R ?git rebase -i %(branch)
 
+# reset
+
 bind main H ?git reset --hard %(commit)
 bind refs H ?git reset --hard %(branch)
 
+# branch
+
 bind refs D ?git branch -d %(branch)
+
+# push
+
+bind generic U ?git push -u %(remote) %(repo:head)
+
+# rm
 
 bind status D ?rm %(file)
 
-bind generic U ?git push -u %(remote) %(repo:head)
+# settings
 
 set status-show-untracked-files = yes
