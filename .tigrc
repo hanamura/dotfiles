@@ -21,6 +21,10 @@ bind refs D ?git branch -d %(branch)
 
 bind generic U ?git push -u %(remote) %(repo:head)
 
+# pull
+
+bind generic P ?git pull %(remote)
+
 # rm
 
 bind status D ?rm %(file)
