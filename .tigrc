@@ -27,8 +27,8 @@ bind generic P ?git pull %(remote)
 
 # fetch
 
-bind generic F ?git fetch %(remote) --all --prune
-bind main    F ?git fetch %(remote) --all --prune
+bind generic F ?git fetch --all --prune
+bind main    F ?git fetch --all --prune
 
 # rm
 
