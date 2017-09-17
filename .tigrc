@@ -16,6 +16,7 @@ bind refs H ?git reset --hard %(branch)
 # branch
 
 bind refs D ?git branch -d %(branch)
+bind refs B ?git checkout -b "%(prompt Enter branch name: )" %(branch)
 
 # push
 
