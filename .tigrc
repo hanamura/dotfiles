@@ -35,6 +35,10 @@ bind main    F ?git fetch --all --prune
 
 bind status D ?rm %(file)
 
+# hub
+
+bind generic <Esc>p ?hub pull-request
+
 # settings
 
 set status-show-untracked-files = yes
