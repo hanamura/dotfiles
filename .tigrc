@@ -5,8 +5,8 @@ bind refs M ?git merge %(branch) --no-ff
 
 # rebase
 
-bind main R ?git rebase -i %(branch)
-bind refs R ?git rebase -i %(branch)
+bind main I ?git rebase -i %(branch)
+bind refs I ?git rebase -i %(branch)
 
 # reset
 
