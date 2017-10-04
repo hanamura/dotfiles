@@ -86,6 +86,11 @@ __link() {
 
   # tig
   __link $repo/.tigrc $HOME/.tigrc
+
+  # qmk
+  rm -rf $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
+  cp -r $repo/keyboards/planck $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
+  echo "⌨️  Copy keymaps"
 }
 
 unset repo
