@@ -40,10 +40,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 
 [_LOWER] = {
-  {KC_ESC,  _______, KC_AMPR, KC_ASTR, _______, KC_SLASH, KC_BSLS, KC_KP_7, KC_KP_8,  KC_KP_9,   _______, _______},
-  {_______, _______, KC_DLR,  KC_PERC, KC_CIRC, KC_MINS,  KC_EQL,  KC_KP_4, KC_KP_5,  KC_KP_6,   _______, _______},
-  {_______, _______, KC_EXLM, KC_AT,   KC_HASH, KC_GRAVE, KC_KP_0, KC_KP_1, KC_KP_2,  KC_KP_3,   _______, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______,  KC_COMMA, KC_KP_DOT, _______, _______}
+  {KC_ESC,  _______, KC_AMPR, KC_ASTR, _______, KC_SLASH, KC_BSLS, KC_KP_7, KC_KP_8, KC_KP_9,   _______, _______},
+  {_______, _______, KC_DLR,  KC_PERC, KC_CIRC, KC_MINS,  KC_EQL,  KC_KP_4, KC_KP_5, KC_KP_6,   _______, _______},
+  {_______, _______, KC_EXLM, KC_AT,   KC_HASH, KC_GRAVE, KC_QUOT, KC_KP_1, KC_KP_2, KC_KP_3,   _______, _______},
+  {_______, _______, _______, _______, _______, _______, _______, _______,  KC_KP_0, KC_KP_DOT, _______, _______}
 },
 
 [_RAISE] = {
