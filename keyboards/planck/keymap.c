@@ -6,10 +6,12 @@ extern keymap_config_t keymap_config;
 #define CAPTURE LGUI(LSFT(LCTL(KC_4)))
 #define PREV_TAB LGUI(LSFT(KC_LBRC))
 #define NEXT_TAB LGUI(LSFT(KC_RBRC))
-#define PREV_WIN LGUI(KC_LBRC)
-#define NEXT_WIN LGUI(KC_RBRC)
+#define PREV_PANE LGUI(KC_LBRC)
+#define NEXT_PANE LGUI(KC_RBRC)
 #define CMD_EISU MT(MOD_LGUI,KC_LANG2)
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
+#define NEXT_WORD LALT(KC_RIGHT)
+#define PREV_WORD LALT(KC_LEFT)
 
 enum planck_layers {
   _QWERTY,
@@ -45,17 +47,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 
 [_RAISE] = {
-  {KC_ESC,  _______, _______, _______, _______, _______, _______, KC_LPRN, KC_RPRN, _______, _______, _______},
-  {_______, _______, _______, _______, _______, _______, _______, KC_LBRC, KC_RBRC, _______, _______, _______},
-  {_______, _______, _______, _______, _______, _______, _______, KC_LT,   KC_GT,   _______, _______, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
+  {KC_ESC,  _______,   _______, KC_UP,   _______,  _______,   _______, KC_LPRN, KC_RPRN, _______, _______, _______},
+  {_______, PREV_WORD, KC_LEFT, KC_DOWN, KC_RIGHT, NEXT_WORD, _______, KC_LBRC, KC_RBRC, _______, _______, _______},
+  {_______, _______,   _______, _______, _______,  _______,   _______, KC_LT,   KC_GT,   _______, _______, _______},
+  {_______, _______,   _______, _______, _______,  _______,   _______, _______, _______, _______, _______, _______}
 },
 
 [_ADJUST] = {
-  {KC_ESC,  _______, KC_BTN1, KC_MS_U, KC_BTN2, _______,  _______,  _______, KC_WH_D, _______, _______, _______},
-  {_______, _______, KC_MS_L, KC_MS_D, KC_MS_R, PREV_TAB, NEXT_TAB, KC_WH_R, KC_WH_U, KC_WH_L, _______, _______},
-  {_______, _______, _______, _______, _______, PREV_WIN, NEXT_WIN, _______, _______, _______, _______, _______},
-  {_______, _______, _______, _______, _______, CAPTURE,  _______,  _______, _______, _______, _______, _______}
+  {KC_ESC,  _______, KC_BTN1, KC_MS_U, KC_BTN2, _______,   _______,   _______, KC_WH_D, _______, _______, _______},
+  {_______, _______, KC_MS_L, KC_MS_D, KC_MS_R, PREV_TAB,  NEXT_TAB,  KC_WH_R, KC_WH_U, KC_WH_L, _______, _______},
+  {_______, RESET,   _______, _______, _______, PREV_PANE, NEXT_PANE, _______, _______, _______, _______, _______},
+  {_______, _______, _______, _______, _______, CAPTURE,   _______,   _______, _______, _______, _______, _______}
 }
 
 };
