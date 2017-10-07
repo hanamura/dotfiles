@@ -88,8 +88,8 @@ __link() {
   __link $repo/.tigrc $HOME/.tigrc
 
   # qmk
-  rm -rf $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
-  cp -r $repo/keyboards/planck $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
+  rm -rf $repo/qmk_firmware/keyboards/planck/keymaps/hanamura_a
+  cp -r $repo/keyboards/planck/hanamura_a $repo/qmk_firmware/keyboards/planck/keymaps/hanamura_a
   echo "⌨️  Copy keymaps"
 }
 
