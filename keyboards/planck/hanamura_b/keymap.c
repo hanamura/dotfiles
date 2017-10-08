@@ -1,8 +1,6 @@
 #include "planck.h"
 #include "action_layer.h"
 
-extern keymap_config_t keymap_config;
-
 #define CAPTURE LGUI(LSFT(LCTL(KC_4)))
 #define PREV_TAB LGUI(LSFT(KC_LBRC))
 #define NEXT_TAB LGUI(LSFT(KC_RBRC))
@@ -12,6 +10,8 @@ extern keymap_config_t keymap_config;
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
 #define NEXT_WORD LALT(KC_RIGHT)
 #define PREV_WORD LALT(KC_LEFT)
+
+extern keymap_config_t keymap_config;
 
 enum planck_layers {
   _QWERTY,
