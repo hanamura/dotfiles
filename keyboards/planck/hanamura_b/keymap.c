@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_TAB,  KC_Q,     KC_W,    KC_E,     KC_R,  KC_T,   KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC},
   {KC_LCTL, KC_A,     KC_S,    KC_D,     KC_F,  KC_G,   KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT},
   {KC_LSFT, KC_Z,     KC_X,    KC_C,     KC_V,  KC_B,   KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_QUOT},
-  {RAISE,   KC_LCTL,  KC_LALT, CMD_EISU, LOWER, KC_SPC, KC_SPC, RAISE, CMD_KANA, KC_RALT, KC_RCTL, LOWER}
+  {RAISE,   KC_LCTL,  KC_LALT, CMD_EISU, LOWER, KC_SPC, KC_SPC, RAISE, CMD_KANA, KC_RALT, KC_RCTL, KC_LEAD}
 },
 
 [_LOWER] = {
@@ -109,4 +109,204 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
   }
   return true;
+}
+
+LEADER_EXTERNS();
+
+void matrix_scan_user(void) {
+  LEADER_DICTIONARY() {
+    leading = false;
+    leader_end();
+
+    // window alignment with divvy
+
+    // expand
+    SEQ_ONE_KEY(KC_D) {
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_ENT);
+      unregister_code(KC_ENT);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_D);
+      unregister_code(KC_D);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+    }
+
+    // left
+    SEQ_ONE_KEY(KC_S) {
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_ENT);
+      unregister_code(KC_ENT);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_S);
+      unregister_code(KC_S);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+    }
+
+    // right
+    SEQ_ONE_KEY(KC_F) {
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_ENT);
+      unregister_code(KC_ENT);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_F);
+      unregister_code(KC_F);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+    }
+
+    // top
+    SEQ_ONE_KEY(KC_E) {
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_ENT);
+      unregister_code(KC_ENT);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_E);
+      unregister_code(KC_E);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+    }
+
+    // bottom
+    SEQ_ONE_KEY(KC_C) {
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_ENT);
+      unregister_code(KC_ENT);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_C);
+      unregister_code(KC_C);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+    }
+
+    // top left
+    SEQ_ONE_KEY(KC_W) {
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_ENT);
+      unregister_code(KC_ENT);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_W);
+      unregister_code(KC_W);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+    }
+
+    // top right
+    SEQ_ONE_KEY(KC_R) {
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_ENT);
+      unregister_code(KC_ENT);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_R);
+      unregister_code(KC_R);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+    }
+
+    // bottom left
+    SEQ_ONE_KEY(KC_X) {
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_ENT);
+      unregister_code(KC_ENT);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_X);
+      unregister_code(KC_X);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+    }
+
+    // bottom right
+    SEQ_ONE_KEY(KC_V) {
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_ENT);
+      unregister_code(KC_ENT);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+
+      register_code(KC_LGUI);
+      register_code(KC_LALT);
+      register_code(KC_LCTL);
+      register_code(KC_V);
+      unregister_code(KC_V);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LGUI);
+    }
+  }
 }
