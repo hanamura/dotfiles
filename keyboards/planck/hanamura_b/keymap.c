@@ -10,6 +10,7 @@
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
 #define NEXT_WORD LALT(KC_RIGHT)
 #define PREV_WORD LALT(KC_LEFT)
+#define NEXT_WIN LGUI(KC_GRAVE)
 
 extern keymap_config_t keymap_config;
 
@@ -57,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_ESC,  _______, _______, KC_WH_D,     _______,   _______,   _______,   KC_BTN1, KC_MS_U, KC_BTN2, _______, _______},
   {_______, _______, KC_WH_R, KC_WH_U,     KC_WH_L,   PREV_TAB,  NEXT_TAB,  KC_MS_L, KC_MS_D, KC_MS_R, _______, _______},
   {_______, RESET,   _______, KC__VOLDOWN, KC__VOLUP, PREV_PANE, NEXT_PANE, _______, _______, _______, _______, _______},
-  {_______, _______, _______, _______,     _______,   CAPTURE,   _______,   _______, _______, _______, _______, _______}
+  {_______, _______, _______, _______,     _______,   CAPTURE,   NEXT_WIN,  _______, _______, _______, _______, _______}
 }
 
 };
