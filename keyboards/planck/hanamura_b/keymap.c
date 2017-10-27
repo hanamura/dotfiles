@@ -8,8 +8,6 @@
 #define NEXT_PANE LGUI(KC_RBRC)
 #define CMD_EISU MT(MOD_LGUI,KC_LANG2)
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
-#define LOWER_EISU LT(LOWER,KC_LANG2)
-#define RAISE_KANA LT(RAISE,KC_LANG1)
 #define NEXT_WORD LALT(KC_RIGHT)
 #define PREV_WORD LALT(KC_LEFT)
 #define NEXT_WIN LGUI(KC_GRAVE)
@@ -38,10 +36,10 @@ enum planck_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = {
-  {KC_TAB,  KC_Q,     KC_W,    KC_E,     KC_R,       KC_T,   KC_Y,   KC_U,       KC_I,     KC_O,    KC_P,    KC_BSPC},
-  {KC_LCTL, KC_A,     KC_S,    KC_D,     KC_F,       KC_G,   KC_H,   KC_J,       KC_K,     KC_L,    KC_SCLN, KC_ENT},
-  {KC_LSFT, KC_Z,     KC_X,    KC_C,     KC_V,       KC_B,   KC_N,   KC_M,       KC_COMM,  KC_DOT,  KC_SLSH, KC_QUOT},
-  {RAISE,   KC_LCTL,  KC_LALT, CMD_EISU, LOWER_EISU, SANDS,  KC_SPC, RAISE_KANA, CMD_KANA, KC_RALT, KC_RCTL, KC_LEAD}
+  {KC_TAB,  KC_Q,     KC_W,    KC_E,     KC_R,  KC_T,   KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC},
+  {KC_LCTL, KC_A,     KC_S,    KC_D,     KC_F,  KC_G,   KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT},
+  {KC_LSFT, KC_Z,     KC_X,    KC_C,     KC_V,  KC_B,   KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_QUOT},
+  {RAISE,   KC_LCTL,  KC_LALT, CMD_EISU, LOWER, SANDS,  KC_SPC, RAISE, CMD_KANA, KC_RALT, KC_RCTL, KC_LEAD}
 },
 
 [_LOWER] = {
