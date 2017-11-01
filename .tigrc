@@ -39,6 +39,10 @@ bind status D ?rm %(file)
 
 bind generic <Esc>p ?hub pull-request
 
+# whichpr
+
+bind refs W @whichpr open %(commit)
+
 # settings
 
 set status-show-untracked-files = yes
