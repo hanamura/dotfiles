@@ -87,6 +87,9 @@ __link() {
   # tig
   __link $repo/.tigrc $HOME/.tigrc
 
+  # peco
+  __link $repo/.peco $HOME/.peco
+
   # qmk
   rm -rf $repo/qmk_firmware/keyboards/planck/keymaps/hanamura_a
   cp -r $repo/keyboards/planck/hanamura_a $repo/qmk_firmware/keyboards/planck/keymaps/hanamura_a
