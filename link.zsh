@@ -91,11 +91,8 @@ __link() {
   __link $repo/.peco $HOME/.peco
 
   # qmk
-  rm -rf $repo/qmk_firmware/keyboards/planck/keymaps/hanamura_a
-  cp -r $repo/keyboards/planck/hanamura_a $repo/qmk_firmware/keyboards/planck/keymaps/hanamura_a
-
-  rm -rf $repo/qmk_firmware/keyboards/planck/keymaps/hanamura_b
-  cp -r $repo/keyboards/planck/hanamura_b $repo/qmk_firmware/keyboards/planck/keymaps/hanamura_b
+  rm -rf $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
+  cp -r $repo/keyboards/planck/hanamura $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
   echo "⌨️  Copy keymaps"
 }
 
