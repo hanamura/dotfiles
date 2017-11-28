@@ -19,8 +19,8 @@
 extern keymap_config_t keymap_config;
 
 #define _QWERTY 0
-#define _LOWER 3
-#define _RAISE 4
+#define _LOWER 1
+#define _RAISE 2
 #define _ADJUST 16
 
 enum custom_keycodes {
@@ -57,10 +57,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_ADJUST] = KEYMAP( \
-  KC_ESC,  _______, _______, KC_WH_D,     _______,   _______,   _______,   KC_BTN1, KC_MS_U, KC_BTN2, _______, _______, \
-  _______, _______, KC_WH_R, KC_WH_U,     KC_WH_L,   PREV_TAB,  NEXT_TAB,  KC_MS_L, KC_MS_D, KC_MS_R, _______, _______, \
-  _______, RESET,   _______, KC__VOLDOWN, KC__VOLUP, PREV_PANE, NEXT_PANE, _______, _______, _______, _______, _______, \
-  _______, _______, _______, _______,     _______,   CAPTURE,   NEXT_WIN,  _______, _______, _______, _______, _______ \
+  KC_ESC,  _______, _______, KC_WH_D,     _______,   _______,   _______,   KC_BTN1, KC_MS_U,  KC_BTN2, RGB_HUI, RGB_HUD, \
+  _______, _______, KC_WH_R, KC_WH_U,     KC_WH_L,   PREV_TAB,  NEXT_TAB,  KC_MS_L, KC_MS_D,  KC_MS_R, RGB_SAI, RGB_SAD, \
+  _______, RESET,   _______, KC__VOLDOWN, KC__VOLUP, PREV_PANE, NEXT_PANE, RGB_M_P, RGB_M_SW, RGB_M_X, RGB_VAI, RGB_VAD, \
+  _______, _______, _______, _______,     _______,   CAPTURE,   NEXT_WIN,  _______, _______,  _______, _______, RGB_TOG \
 )
 
 };
