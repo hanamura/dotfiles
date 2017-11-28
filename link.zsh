@@ -91,11 +91,15 @@ __link() {
   __link $repo/.peco $HOME/.peco
 
   # qmk
+
+  # $ make planck/rev4:hanamura:dfu
   rm -rf $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
   cp -r $repo/keyboards/planck/hanamura $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
 
+  # $ make lets_split/rev2:hanamura:avrdude
   rm -rf $repo/qmk_firmware/keyboards/lets_split/keymaps/hanamura
   cp -r $repo/keyboards/lets_split/hanamura $repo/qmk_firmware/keyboards/lets_split/keymaps/hanamura
+
   echo "⌨️  Copy keymaps"
 }
 
