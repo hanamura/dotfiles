@@ -7,6 +7,8 @@
 
 #define MASTER_LEFT
 
+#endif
+
 #define MOUSEKEY_DELAY 0
 #define MOUSEKEY_DELTA 5
 #define MOUSEKEY_INTERVAL 0
@@ -15,4 +17,4 @@
 
 #define LEADER_TIMEOUT 300
 
-#endif
+#define TAPPING_TERM 100
