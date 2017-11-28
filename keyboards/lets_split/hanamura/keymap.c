@@ -14,6 +14,7 @@
 #define NEXT_WIN LGUI(KC_GRAVE)
 #define ELLIPSIS LALT(KC_SCLN)
 #define SANDS SFT_T(KC_SPC)
+#define CTL_ESC MT(MOD_LCTL,KC_ESC)
 
 extern keymap_config_t keymap_config;
 
@@ -36,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = KEYMAP( \
   KC_TAB,  KC_Q,    KC_W,    KC_E,     KC_R,  KC_T,  KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC, \
-  KC_LCTL, KC_A,    KC_S,    KC_D,     KC_F,  KC_G,  KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT, \
+  CTL_ESC, KC_A,    KC_S,    KC_D,     KC_F,  KC_G,  KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT, \
   KC_LSFT, KC_Z,    KC_X,    KC_C,     KC_V,  KC_B,  KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_QUOT , \
   RAISE,   KC_LCTL, KC_LALT, CMD_EISU, LOWER, SANDS, KC_SPC, RAISE, CMD_KANA, KC_DOWN, KC_UP,   KC_RGHT \
 ),
