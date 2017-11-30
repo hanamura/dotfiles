@@ -118,6 +118,10 @@ fi
 
 alias html_escape="html-minifier | php -r \"echo htmlspecialchars(stream_get_contents(STDIN));\""
 
+# mp4 to mp3
+
+alias mp4tomp3='find . -type f -name "*.mp4" -print0 | perl -pe "s/\.mp4\0/\0/g" | xargs -0 -I% ffmpeg -i %.mp4 %.mp3'
+
 # nvm
 # ===
 
