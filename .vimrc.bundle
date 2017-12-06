@@ -78,6 +78,7 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'morhetz/gruvbox'
 
 " go
 NeoBundle 'vim-jp/vim-go-extra'
