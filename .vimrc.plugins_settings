@@ -155,6 +155,8 @@ omap / <Plug>(easymotion-tn)
 nnoremap g/ /
 map f <Plug>(easymotion-bd-fl)
 map t <Plug>(easymotion-bd-tl)
+nnoremap <silent> gf f
+nnoremap <silent> gt t
 
 " vim-json
 " ========
