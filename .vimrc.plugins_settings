@@ -81,9 +81,7 @@ let g:ctrlp_map='<C-l>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_extensions=[
-      \ 'register',
       \ 'filetype',
-      \ 'line',
       \ 'ghq',
       \ ]
 let g:ctrlp_show_hidden=1
@@ -167,7 +165,6 @@ let g:user_emmet_leader_key='<c-k>'
 
 " ale
 " ===
-
 let g:ale_lint_on_text_changed='never'
 let g:ale_linters={
       \ 'javascript': ['eslint'],
