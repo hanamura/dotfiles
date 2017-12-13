@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " edit
 Plug 'Lokaltog/vim-easymotion'
-Plug 'godlygeek/tabular', {'on': 'Tabularize'}
+Plug 'godlygeek/tabular', {'on': ['Tabularize']}
 Plug 'kana/vim-smartword'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
@@ -31,7 +31,7 @@ Plug 'othree/yajs.vim', {'for': ['javascript']}
 
 " utility
 Plug 'editorconfig/editorconfig-vim'
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle']}
 Plug 'thinca/vim-qfreplace'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
