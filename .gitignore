@@ -2,4 +2,5 @@
 /.atom/blob-store
 /.atom/packages
 /.vim/bundle/*
+/.vim/plugged/*
 !/.vim/bundle/neobundle.vim
