@@ -80,9 +80,6 @@ __link() {
   # atom
   __link $repo/.atom $HOME/.atom
 
-  # karabiner
-  __link $repo/private.xml "$HOME/Library/Application Support/Karabiner/private.xml"
-
   # tig
   __link $repo/.tigrc $HOME/.tigrc
 
