@@ -9,15 +9,13 @@ let g:netrw_alto=1 " open file in the buffer below with 'o'
 
 " neocomplete
 " ===========
-if neobundle#is_installed('neocomplete')
-  let g:neocomplete#enable_at_startup=1
-  let g:neocomplete#enable_ignore_case=1
-  let g:neocomplete#enable_smart_case=1
-  if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns={}
-  endif
-  let g:neocomplete#keyword_patterns._='\h\w*'
+let g:neocomplete#enable_at_startup=1
+let g:neocomplete#enable_ignore_case=1
+let g:neocomplete#enable_smart_case=1
+if !exists('g:neocomplete#keyword_patterns')
+  let g:neocomplete#keyword_patterns={}
 endif
+let g:neocomplete#keyword_patterns._='\h\w*'
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
@@ -83,9 +81,7 @@ let g:ctrlp_map='<C-l>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_extensions=[
-      \ 'register',
       \ 'filetype',
-      \ 'line',
       \ 'ghq',
       \ ]
 let g:ctrlp_show_hidden=1
@@ -169,7 +165,6 @@ let g:user_emmet_leader_key='<c-k>'
 
 " ale
 " ===
-
 let g:ale_lint_on_text_changed='never'
 let g:ale_linters={
       \ 'javascript': ['eslint'],
