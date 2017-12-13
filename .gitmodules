@@ -1,9 +1,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git@github.com:robbyrussell/oh-my-zsh.git
-[submodule ".vim/bundle/neobundle.vim"]
-	path = .vim/bundle/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim
 [submodule "qmk_firmware"]
 	path = qmk_firmware
 	url = git://github.com/qmk/qmk_firmware.git
