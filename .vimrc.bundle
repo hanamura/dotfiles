@@ -1,50 +1,46 @@
 call plug#begin('~/.vim/plugged')
 
 " edit
-Plug 'tpope/vim-surround'
-Plug 'tyru/caw.vim'
-Plug 'godlygeek/tabular'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-line'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'godlygeek/tabular', {'on': 'Tabularize'}
+Plug 'kana/vim-smartword'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
-Plug 'kana/vim-smartword'
-Plug 'Lokaltog/vim-easymotion'
-Plug 'tpope/vim-repeat'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
 Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tyru/caw.vim'
 Plug 'w0rp/ale'
 
 " completion
 Plug 'Shougo/neocomplete'
-Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/neosnippet.vim'
 
 " programming
 Plug 'thinca/vim-quickrun'
 
 " syntax
-Plug 'elzr/vim-json'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'digitaltoad/vim-pug'
-Plug 'othree/yajs.vim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'jwalton512/vim-blade'
-Plug 'posva/vim-vue'
+Plug 'cakebaker/scss-syntax.vim', {'for': ['scss']}
+Plug 'elzr/vim-json', {'for': ['json']}
+Plug 'jwalton512/vim-blade', {'for': ['blade']}
+Plug 'kchmck/vim-coffee-script', {'for': ['coffee']}
+Plug 'othree/yajs.vim', {'for': ['javascript']}
 
 " utility
-Plug 'scrooloose/nerdtree'
-Plug 'Shougo/vimshell'
-Plug 'Shougo/vimproc.vim', {'do': 'make'}
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'thinca/vim-qfreplace'
 Plug 'tpope/vim-fugitive'
-Plug 'mattn/ctrlp-ghq'
-Plug 'endel/ctrlp-filetype.vim'
-Plug 'mattn/ctrlp-register'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'thinca/vim-localrc'
-Plug 'editorconfig/editorconfig-vim'
+
+" ctrlp
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'endel/ctrlp-filetype.vim'
+Plug 'mattn/ctrlp-ghq'
 
 " colorschemes
 Plug 'morhetz/gruvbox'
