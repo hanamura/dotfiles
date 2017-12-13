@@ -65,7 +65,6 @@ __link() {
   # vim
   __link $repo/.vim                    $HOME/.vim
   __link $repo/.snippets               $HOME/.snippets
-  __link $repo/.gvimrc                 $HOME/.gvimrc
   __link $repo/.vimrc                  $HOME/.vimrc
   __link $repo/.vimrc.basic            $HOME/.vimrc.basic
   __link $repo/.vimrc.bundle           $HOME/.vimrc.bundle
