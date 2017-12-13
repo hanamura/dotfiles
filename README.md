@@ -4,10 +4,10 @@
 
 ## Environment
 
-- OS: OS X
+- OS: macOS
 - Package Manager: Homebrew
 - Shell: zsh with oh-my-zsh
-- Editor: Vim, MacVim, Atom
+- Editor: Vim
 
 ## Usage
 
