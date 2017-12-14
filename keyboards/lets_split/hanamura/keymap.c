@@ -15,18 +15,21 @@
 #define CTL_ESC MT(MOD_LCTL,KC_ESC)
 #define TRU_DQT LALT(KC_LBRC)
 #define TRU_QT LALT(KC_RBRC)
+#define NUMPAD_Z LT(_NUMPAD,KC_Z)
 
 extern keymap_config_t keymap_config;
 
 #define _QWERTY 0
 #define _LOWER 1
 #define _RAISE 2
+#define _NUMPAD 4
 #define _ADJUST 16
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   LOWER,
   RAISE,
+  NUMPAD,
   ADJUST,
 };
 
@@ -36,10 +39,10 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = KEYMAP( \
-  KC_TAB,  KC_Q,    KC_W,    KC_E,     KC_R,  KC_T,    KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC, \
-  CTL_ESC, KC_A,    KC_S,    KC_D,     KC_F,  KC_G,    KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT,  \
-  KC_LSFT, KC_Z,    KC_X,    KC_C,     KC_V,  KC_B,    KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT, \
-  RAISE,   KC_LCTL, KC_LALT, CMD_EISU, LOWER, KC_LSFT, KC_SPC, LOWER, CMD_KANA, XXXXXXX, XXXXXXX, RAISE    \
+  KC_TAB,  KC_Q,     KC_W,    KC_E,     KC_R,  KC_T,    KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC, \
+  CTL_ESC, KC_A,     KC_S,    KC_D,     KC_F,  KC_G,    KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT,  \
+  KC_LSFT, NUMPAD_Z, KC_X,    KC_C,     KC_V,  KC_B,    KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT, \
+  XXXXXXX, KC_LCTL,  KC_LALT, CMD_EISU, LOWER, KC_LSFT, KC_SPC, RAISE, CMD_KANA, XXXXXXX, XXXXXXX, XXXXXXX  \
 ),
 
 [_LOWER] = KEYMAP( \
@@ -50,17 +53,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_RAISE] = KEYMAP( \
+  KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS, \
+  _______, KC_TILD, _______, KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, KC_LBRC,  KC_RBRC, KC_LCBR, KC_RCBR, _______, \
+  _______, _______, _______, TRU_DQT, TRU_QT,  KC_PLUS, KC_EQL,  ELLIPSIS, KC_PIPE, _______, _______, _______, \
+  _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______  \
+),
+
+[_NUMPAD] = KEYMAP( \
   _______, _______, _______, KC_UP,   _______, _______, _______, KC_P7,   KC_P8, KC_P9,   KC_PSLS, _______, \
   _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PMNS, KC_P4,   KC_P5, KC_P6,   KC_PAST, _______, \
   _______, _______, _______, _______, _______, _______, KC_PEQL, KC_P1,   KC_P2, KC_P3,   KC_PPLS, _______, \
-  _______, _______, _______, _______, _______, _______, _______, _______, KC_P0, KC_PDOT, KC_PCMM, _______ \
+  _______, _______, _______, _______, _______, _______, _______, _______, KC_P0, KC_PDOT, KC_PCMM, _______  \
 ),
 
 [_ADJUST] = KEYMAP( \
   _______, _______, _______, KC_WH_D,     _______,   _______,   _______,   KC_BTN1, KC_MS_U,  KC_BTN2, RGB_HUI, RGB_HUD, \
   _______, _______, KC_WH_R, KC_WH_U,     KC_WH_L,   PREV_TAB,  NEXT_TAB,  KC_MS_L, KC_MS_D,  KC_MS_R, RGB_SAI, RGB_SAD, \
   _______, RESET,   _______, KC__VOLDOWN, KC__VOLUP, PREV_PANE, NEXT_PANE, RGB_M_P, RGB_M_SW, RGB_M_X, RGB_VAI, RGB_VAD, \
-  _______, _______, _______, _______,     _______,   CAPTURE,   NEXT_WIN,  _______, _______,  _______, _______, RGB_TOG \
+  _______, _______, _______, _______,     _______,   CAPTURE,   NEXT_WIN,  _______, _______,  _______, _______, RGB_TOG  \
 )
 
 };
@@ -102,6 +112,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       } else {
         layer_off(_RAISE);
         update_tri_layer(_LOWER, _RAISE, _ADJUST);
+      }
+      return false;
+      break;
+    case NUMPAD:
+      if (record->event.pressed) {
+        layer_on(_NUMPAD);
+      } else {
+        layer_off(_NUMPAD);
       }
       return false;
       break;
