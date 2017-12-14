@@ -3,4 +3,6 @@ ifndef QUANTUM_DIR
 endif
 
 AUDIO_ENABLE = no
+MIDI_ENABLE = no
+MOUSEKEY_ENABLE = yes
 TAP_DANCE_ENABLE = yes
