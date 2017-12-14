@@ -1,16 +1,18 @@
 #ifndef CONFIG_USER_H
 #define CONFIG_USER_H
 
-#include "../../config.h"
+#include "config_common.h"
 
+#ifdef AUDIO_ENABLE
+    #define STARTUP_SONG SONG(PLANCK_SOUND)
+    #define DEFAULT_LAYER_SONGS { SONG(QWERTY_SOUND), \
+                                  SONG(COLEMAK_SOUND), \
+                                  SONG(DVORAK_SOUND) \
+                                }
 #endif
 
-#define MOUSEKEY_DELAY 0
-#define MOUSEKEY_DELTA 5
-#define MOUSEKEY_INTERVAL 0
-#define MOUSEKEY_MAX_SPEED 3
-#define MOUSEKEY_TIME_TO_MAX 120
+#define MUSIC_MASK (keycode != KC_NO)
 
-#define LEADER_TIMEOUT 300
+#define MIDI_BASIC
 
-#define TAPPING_TERM 100
+#endif
