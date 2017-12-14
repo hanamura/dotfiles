@@ -16,3 +16,5 @@
 #define MIDI_BASIC
 
 #endif
+
+#define TAPPING_TERM 150
