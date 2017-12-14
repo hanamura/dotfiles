@@ -106,14 +106,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_LOWER] = KEYMAP( \
   KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS, \
-  _______, KC_TILD, _______, KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,      TDR,     KC_LBRC, KC_RBRC, _______, \
+  _______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,      TDR,     KC_LBRC, KC_RBRC, _______, \
   _______, _______, _______, TRU_DQT, TRU_QT,  KC_PLUS, KC_EQL,  ELLIPSIS, KC_PIPE, KC_LCBR, KC_RCBR, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______  \
 ),
 
 [_RAISE] = KEYMAP( \
   KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS, \
-  _______, KC_TILD, _______, KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,      TDR,     KC_LBRC, KC_RBRC, _______, \
+  _______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,      TDR,     KC_LBRC, KC_RBRC, _______, \
   _______, _______, _______, TRU_DQT, TRU_QT,  KC_PLUS, KC_EQL,  ELLIPSIS, KC_PIPE, KC_LCBR, KC_RCBR, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______  \
 ),
