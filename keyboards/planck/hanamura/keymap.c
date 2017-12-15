@@ -123,8 +123,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 
 [_ADJUST] = {
-  {_______, _______, _______, KC_WH_D,     _______,   _______,   _______,   KC_BTN1, KC_MS_U,  KC_BTN2, _______, _______},
-  {_______, _______, KC_WH_R, KC_WH_U,     KC_WH_L,   PREV_TAB,  NEXT_TAB,  KC_MS_L, KC_MS_D,  KC_MS_R, _______, _______},
+  {_______, _______, _______, KC_PGUP,     _______,   _______,   _______,   KC_BTN1, KC_MS_U,  KC_BTN2, _______, _______},
+  {_______, _______, _______, KC_PGDN,     _______,   PREV_TAB,  NEXT_TAB,  KC_MS_L, KC_MS_D,  KC_MS_R, _______, _______},
   {_______, RESET,   _______, KC__VOLDOWN, KC__VOLUP, PREV_PANE, NEXT_PANE, RGB_M_P, RGB_M_SW, RGB_M_X, _______, _______},
   {_______, _______, _______, _______,     _______,   CAPTURE,   NEXT_WIN,  _______, _______,  _______, _______, _______}
 }
