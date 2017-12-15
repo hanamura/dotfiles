@@ -71,7 +71,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define CTL_ESC MT(MOD_LCTL,KC_ESC)
 #define TRU_DQT LALT(KC_LBRC)
 #define TRU_QT LALT(KC_RBRC)
-#define NUMPAD_A LT(_NUMPAD,KC_A)
+#define NUMPAD_Z LT(_NUMPAD,KC_Z)
 #define TDL TD(TD_L)
 #define TDR TD(TD_R)
 
@@ -96,8 +96,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = {
   {KC_TAB,  KC_Q,     KC_W,    KC_E,     KC_R,  KC_T,    KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC},
-  {CTL_ESC, NUMPAD_A, KC_S,    KC_D,     KC_F,  KC_G,    KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT},
-  {KC_LSFT, KC_Z,     KC_X,    KC_C,     KC_V,  KC_B,    KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT},
+  {CTL_ESC, KC_A,     KC_S,    KC_D,     KC_F,  KC_G,    KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT},
+  {KC_LSFT, NUMPAD_Z, KC_X,    KC_C,     KC_V,  KC_B,    KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT},
   {XXXXXXX, KC_LCTL,  KC_LALT, CMD_EISU, LOWER, KC_LSFT, KC_SPC, RAISE, CMD_KANA, XXXXXXX, XXXXXXX, XXXXXXX}
 },
 
