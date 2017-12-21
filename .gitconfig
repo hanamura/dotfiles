@@ -12,6 +12,7 @@
   remotes = remote -v
   chardiff = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
   pr = pull-request
+  delete-merged-branches = !git branch --merged | grep -vE '^\\*|master$|develop$' | xargs -I % git branch -d %
 
 [core]
   excludesfile = ~/.gitignore_global
