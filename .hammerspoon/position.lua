@@ -109,6 +109,14 @@ function fullDimension(dim)
   end
 end
 
+hs.hotkey.bind(hyper, "h", function ()
+  hs.window.frontmostWindow():moveOneScreenWest()
+end)
+
+hs.hotkey.bind(hyper, ";", function ()
+  hs.window.frontmostWindow():moveOneScreenEast()
+end)
+
 hs.hotkey.bind(hyper, "down", function ()
   pressed.down = true
   if pressed.up then 

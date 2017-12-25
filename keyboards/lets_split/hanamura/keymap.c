@@ -80,6 +80,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define W_LEFT LCAG(KC_LEFT)
 #define W_RIGHT LCAG(KC_RGHT)
 #define W_FULL LCAG(KC_F)
+#define WS_WEST LCAG(KC_H)
+#define WS_EAST LCAG(KC_SCLN)
 
 extern keymap_config_t keymap_config;
 
@@ -134,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_WINDOW] = KEYMAP( \
   _______, _______, _______, _______, _______, _______, _______, _______, W_UP,    _______, _______, _______, \
-  _______, _______, _______, _______, _______, _______, _______, W_LEFT,  W_FULL,  W_RIGHT, _______, _______, \
+  _______, _______, _______, _______, _______, _______, WS_WEST, W_LEFT,  W_FULL,  W_RIGHT, WS_EAST, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, W_DOWN,  _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  \
 ),
