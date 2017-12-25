@@ -15,7 +15,7 @@
 -- OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 -- DEALINGS IN THE SOFTWARE.
 
-hs.window.animationDuration = 0.3
+hs.window.animationDuration = 0
 
 local sizes = {2, 3, 3/2}
 local fullScreenSizes = {1, 4/3, 2}
