@@ -86,6 +86,9 @@ __link() {
   # peco
   __link $repo/.peco $HOME/.peco
 
+  # hammerspoon
+  __link $repo/.hammerspoon $HOME/.hammerspoon
+
   # qmk
 
   # $ make planck/rev4:hanamura:dfu
