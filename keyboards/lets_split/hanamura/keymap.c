@@ -75,13 +75,19 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define NUMPAD_Z LT(_NUMPAD,KC_Z)
 #define TDL TD(TD_L)
 #define TDR TD(TD_R)
+#define W_UP LCAG(KC_UP)
+#define W_DOWN LCAG(KC_DOWN)
+#define W_LEFT LCAG(KC_LEFT)
+#define W_RIGHT LCAG(KC_RGHT)
+#define W_FULL LCAG(KC_F)
 
 extern keymap_config_t keymap_config;
 
 #define _QWERTY 0
 #define _LOWER 1
 #define _RAISE 2
-#define _NUMPAD 4
+#define _NUMPAD 3
+#define _WINDOW 4
 #define _ADJUST 16
 
 enum custom_keycodes {
@@ -89,6 +95,7 @@ enum custom_keycodes {
   LOWER,
   RAISE,
   NUMPAD,
+  WINDOW,
   ADJUST,
 };
 
@@ -101,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  KC_Q,     KC_W,    KC_E,     KC_R,  KC_T,    KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC, \
   CTL_ESC, KC_A,     KC_S,    KC_D,     KC_F,  KC_G,    KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT,  \
   KC_LSFT, NUMPAD_Z, KC_X,    KC_C,     KC_V,  KC_B,    KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT, \
-  XXXXXXX, KC_LCTL,  KC_LALT, CMD_EISU, LOWER, KC_LSFT, KC_SPC, RAISE, CMD_KANA, KC_RALT, KC_RCTL, XXXXXXX  \
+  WINDOW,  KC_LCTL,  KC_LALT, CMD_EISU, LOWER, KC_LSFT, KC_SPC, RAISE, CMD_KANA, KC_RALT, KC_RCTL, XXXXXXX  \
 ),
 
 [_LOWER] = KEYMAP( \
@@ -123,6 +130,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PMNS, KC_P4,   KC_P5, KC_P6,   KC_PAST, _______, \
   _______, _______, _______, _______, _______, _______, KC_PEQL, KC_P1,   KC_P2, KC_P3,   KC_PSLS, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, KC_P0, KC_PDOT, KC_PCMM, _______  \
+),
+
+[_WINDOW] = KEYMAP( \
+  _______, _______, _______, _______, _______, _______, _______, _______, W_UP,    _______, _______, _______, \
+  _______, _______, _______, _______, _______, _______, _______, W_LEFT,  W_FULL,  W_RIGHT, _______, _______, \
+  _______, _______, _______, _______, _______, _______, _______, _______, W_DOWN,  _______, _______, _______, \
+  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  \
 ),
 
 [_ADJUST] = KEYMAP( \
@@ -179,6 +193,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         layer_on(_NUMPAD);
       } else {
         layer_off(_NUMPAD);
+      }
+      return false;
+      break;
+    case WINDOW:
+      if (record->event.pressed) {
+        layer_on(_WINDOW);
+      } else {
+        layer_off(_WINDOW);
       }
       return false;
       break;
