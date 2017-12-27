@@ -99,6 +99,10 @@ __link() {
   rm -rf $repo/qmk_firmware/keyboards/lets_split/keymaps/hanamura
   cp -r $repo/keyboards/lets_split/hanamura $repo/qmk_firmware/keyboards/lets_split/keymaps/hanamura
 
+  # $ make nyquist/rev1:hanamura:avrdude
+  rm -rf $repo/qmk_firmware/keyboards/nyquist/keymaps/hanamura
+  cp -r $repo/keyboards/nyquist/hanamura $repo/qmk_firmware/keyboards/nyquist/keymaps/hanamura
+
   echo "⌨️  Copy keymaps"
 }
 
