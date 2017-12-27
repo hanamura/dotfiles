@@ -72,6 +72,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define CTL_ESC MT(MOD_LCTL,KC_ESC)
 #define TRU_DQT LALT(KC_LBRC)
 #define TRU_QT LALT(KC_RBRC)
+#define NUMPAD_Z LT(_NUMPAD,KC_Z)
 #define TDL TD(TD_L)
 #define TDR TD(TD_R)
 
@@ -80,12 +81,14 @@ extern keymap_config_t keymap_config;
 #define _QWERTY 0
 #define _LOWER 1
 #define _RAISE 2
+#define _NUMPAD 3
 #define _ADJUST 16
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   LOWER,
   RAISE,
+  NUMPAD,
   ADJUST,
 };
 
@@ -95,11 +98,11 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = KEYMAP( \
-  KC_GRV,  KC_EXLM, KC_AT,   KC_HASH,  KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR,  KC_LPRN, KC_RPRN, KC_BSLS, \
-  KC_TAB,  KC_Q,    KC_W,    KC_E,     KC_R,   KC_T,    KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,    KC_BSPC, \
-  CTL_ESC, KC_A,    KC_S,    KC_D,     KC_F,   KC_G,    KC_H,    KC_J,    KC_K,     KC_L,    KC_SCLN, KC_ENT,  \
-  KC_LSFT, KC_Z,    KC_X,    KC_C,     KC_V,   KC_B,    KC_N,    KC_M,    KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT, \
-  XXXXXXX, KC_LCTL, KC_LALT, CMD_EISU, LOWER,  KC_SPC,  KC_SPC,  RAISE,   CMD_KANA, KC_RALT, KC_RCTL, XXXXXXX  \
+  KC_GRV,  KC_EXLM,  KC_AT,   KC_HASH,  KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR,  KC_LPRN, KC_RPRN, KC_BSLS, \
+  KC_TAB,  KC_Q,     KC_W,    KC_E,     KC_R,   KC_T,    KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,    KC_BSPC, \
+  CTL_ESC, KC_A,     KC_S,    KC_D,     KC_F,   KC_G,    KC_H,    KC_J,    KC_K,     KC_L,    KC_SCLN, KC_ENT,  \
+  KC_LSFT, NUMPAD_Z, KC_X,    KC_C,     KC_V,   KC_B,    KC_N,    KC_M,    KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT, \
+  XXXXXXX, KC_LCTL,  KC_LALT, CMD_EISU, LOWER,  KC_SPC,  KC_SPC,  RAISE,   CMD_KANA, KC_RALT, KC_RCTL, XXXXXXX  \
 ),
 
 [_LOWER] = KEYMAP( \
@@ -116,6 +119,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,      TDR,     KC_LBRC, KC_RBRC, _______, \
   _______, _______, _______, TRU_DQT, TRU_QT,  KC_PLUS, KC_EQL,  ELLIPSIS, KC_PIPE, KC_LCBR, KC_RCBR, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______  \
+),
+
+[_NUMPAD] = KEYMAP( \
+  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+  _______, _______, _______, KC_UP,   _______, _______, KC_PPLS, KC_P7,   KC_P8,   KC_P9,   KC_P0,   _______, \
+  _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PMNS, KC_P4,   KC_P5,   KC_P6,   KC_PAST, _______, \
+  _______, _______, _______, _______, _______, _______, KC_PEQL, KC_P1,   KC_P2,   KC_P3,   KC_PSLS, _______, \
+  _______, _______, _______, _______, _______, _______, _______, _______, KC_P0,   KC_PDOT, KC_PCMM, _______  \
 ),
 
 [_ADJUST] =  KEYMAP( \
