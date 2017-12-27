@@ -2,6 +2,64 @@
 #include "action_layer.h"
 #include "eeconfig.h"
 
+void dance_l_finished(qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    register_code(KC_LSFT);
+    register_code(KC_9);
+  } else if (state->count == 2) {
+    register_code(KC_LBRC);
+  } else {
+    register_code(KC_LSFT);
+    register_code(KC_LBRC);
+  }
+}
+
+void dance_l_reset(qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    unregister_code(KC_LSFT);
+    unregister_code(KC_9);
+  } else if (state->count == 2) {
+    unregister_code(KC_LBRC);
+  } else {
+    unregister_code(KC_LSFT);
+    unregister_code(KC_LBRC);
+  }
+}
+
+void dance_r_finished(qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    register_code(KC_LSFT);
+    register_code(KC_0);
+  } else if (state->count == 2) {
+    register_code(KC_RBRC);
+  } else {
+    register_code(KC_LSFT);
+    register_code(KC_RBRC);
+  }
+}
+
+void dance_r_reset(qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    unregister_code(KC_LSFT);
+    unregister_code(KC_0);
+  } else if (state->count == 2) {
+    unregister_code(KC_RBRC);
+  } else {
+    unregister_code(KC_LSFT);
+    unregister_code(KC_RBRC);
+  }
+}
+
+enum {
+  TD_L = 0,
+  TD_R
+};
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+  [TD_L] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_l_finished, dance_l_reset),
+  [TD_R] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_r_finished, dance_r_reset),
+};
+
 #define CAPTURE LGUI(LSFT(LCTL(KC_4)))
 #define PREV_TAB LGUI(LSFT(KC_LBRC))
 #define NEXT_TAB LGUI(LSFT(KC_RBRC))
@@ -14,6 +72,8 @@
 #define CTL_ESC MT(MOD_LCTL,KC_ESC)
 #define TRU_DQT LALT(KC_LBRC)
 #define TRU_QT LALT(KC_RBRC)
+#define TDL TD(TD_L)
+#define TDR TD(TD_R)
 
 extern keymap_config_t keymap_config;
 
@@ -45,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = KEYMAP( \
   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, \
   KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS, \
-  _______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, _______,  _______, KC_LBRC, KC_RBRC, _______, \
+  _______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,      TDR,     KC_LBRC, KC_RBRC, _______, \
   _______, _______, _______, TRU_DQT, TRU_QT,  KC_PLUS, KC_EQL,  ELLIPSIS, KC_PIPE, KC_LCBR, KC_RCBR, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______  \
 ),
@@ -53,7 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE] = KEYMAP( \
   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, \
   KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS, \
-  _______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, _______,  _______, KC_LBRC, KC_RBRC, _______, \
+  _______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,      TDR,     KC_LBRC, KC_RBRC, _______, \
   _______, _______, _______, TRU_DQT, TRU_QT,  KC_PLUS, KC_EQL,  ELLIPSIS, KC_PIPE, KC_LCBR, KC_RCBR, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______  \
 ),
