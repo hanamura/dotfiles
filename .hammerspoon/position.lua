@@ -117,70 +117,34 @@ hs.hotkey.bind(hyper, ";", function ()
   hs.window.frontmostWindow():moveOneScreenEast()
 end)
 
-hs.hotkey.bind(hyper, "down", function ()
-  pressed.down = true
-  if pressed.up then 
-    fullDimension('h')
-  else
-    nextStep('h', true, function (cell, nextSize)
-      cell.y = GRID.h - GRID.h / nextSize
-      cell.h = GRID.h / nextSize
-    end)
-  end
-end, function () 
-  pressed.down = false
+hs.hotkey.bind(hyper, ",", function ()
+  nextStep('h', true, function (cell, nextSize)
+    cell.y = GRID.h - GRID.h / nextSize
+    cell.h = GRID.h / nextSize
+  end)
 end)
 
-hs.hotkey.bind(hyper, "right", function ()
-  pressed.right = true
-  if pressed.left then 
-    fullDimension('w')
-  else
-    nextStep('w', true, function (cell, nextSize)
-      cell.x = GRID.w - GRID.w / nextSize
-      cell.w = GRID.w / nextSize
-    end)
-  end
-end, function () 
-  pressed.right = false
+hs.hotkey.bind(hyper, "l", function ()
+  nextStep('w', true, function (cell, nextSize)
+    cell.x = GRID.w - GRID.w / nextSize
+    cell.w = GRID.w / nextSize
+  end)
 end)
 
-hs.hotkey.bind(hyper, "left", function ()
-  pressed.left = true
-  if pressed.right then 
-    fullDimension('w')
-  else
-    nextStep('w', false, function (cell, nextSize)
-      cell.x = 0
-      cell.w = GRID.w / nextSize
-    end)
-  end
-end, function () 
-  pressed.left = false
-end)
-
-hs.hotkey.bind(hyper, "up", function ()
-  pressed.up = true
-  if pressed.down then 
-      fullDimension('h')
-  else
-    nextStep('h', false, function (cell, nextSize)
-      cell.y = 0
-      cell.h = GRID.h / nextSize
-    end)
-  end
-end, function () 
-  pressed.up = false
-end)
-
-hs.hotkey.bind(hyper, "f", function ()
-  nextFullScreenStep()
+hs.hotkey.bind(hyper, "j", function ()
+  nextStep('w', false, function (cell, nextSize)
+    cell.x = 0
+    cell.w = GRID.w / nextSize
+  end)
 end)
 
 hs.hotkey.bind(hyper, "i", function ()
-  local win = hs.window.frontmostWindow()
-  local id = win:id()
-  local screen = win:screen()
-  cell = hs.grid.get(win, screen)
-  hs.alert.show(cell)
+  nextStep('h', false, function (cell, nextSize)
+    cell.y = 0
+    cell.h = GRID.h / nextSize
+  end)
+end)
+
+hs.hotkey.bind(hyper, "k", function ()
+  nextFullScreenStep()
 end)
