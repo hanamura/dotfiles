@@ -60,17 +60,16 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 };
 
 #define CAPTURE LGUI(LSFT(LCTL(KC_4)))
-#define PREV_TAB LGUI(LSFT(KC_LBRC))
-#define NEXT_TAB LGUI(LSFT(KC_RBRC))
-#define PREV_PANE LGUI(KC_LBRC)
-#define NEXT_PANE LGUI(KC_RBRC)
+#define TAB_PREV LGUI(LSFT(KC_LBRC))
+#define TAB_NEXT LGUI(LSFT(KC_RBRC))
+#define PANE_PREV LGUI(KC_LBRC)
+#define PANE_NEXT LGUI(KC_RBRC)
 #define CMD_EISU MT(MOD_LGUI,KC_LANG2)
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
-#define NEXT_WIN LGUI(KC_GRV)
-#define ELLIPSIS LALT(KC_SCLN)
+#define C_ELPS LALT(KC_SCLN)
 #define CTL_ESC MT(MOD_LCTL,KC_ESC)
-#define TRU_DQT LALT(KC_LBRC)
-#define TRU_QT LALT(KC_RBRC)
+#define C_TRUDQ LALT(KC_LBRC)
+#define C_TRUSQ LALT(KC_RBRC)
 #define NUMPAD_Z LT(_NUMPAD,KC_Z)
 #define TDL TD(TD_L)
 #define TDR TD(TD_R)
@@ -111,17 +110,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 
 [_LOWER] = {
-  {KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS},
-  {_______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,      TDR,     KC_LBRC, KC_RBRC, _______},
-  {_______, _______, _______, TRU_DQT, TRU_QT,  KC_PLUS, KC_EQL,  ELLIPSIS, KC_PIPE, KC_LCBR, KC_RCBR, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______}
+  {KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS},
+  {_______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,     TDR,     KC_LBRC, KC_RBRC, _______},
+  {_______, _______, _______, C_TRUDQ, C_TRUSQ, KC_PLUS, KC_EQL,  C_ELPS,  KC_PIPE, KC_LCBR, KC_RCBR, _______},
+  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
 },
 
 [_RAISE] = {
-  {KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS},
-  {_______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,      TDR,     KC_LBRC, KC_RBRC, _______},
-  {_______, _______, _______, TRU_DQT, TRU_QT,  KC_PLUS, KC_EQL,  ELLIPSIS, KC_PIPE, KC_LCBR, KC_RCBR, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______}
+  {KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS},
+  {_______, KC_TILD, KC_GRV,  KC_DQT,  KC_QUOT, KC_UNDS, KC_MINS, TDL,     TDR,     KC_LBRC, KC_RBRC, _______},
+  {_______, _______, _______, C_TRUDQ, C_TRUSQ, KC_PLUS, KC_EQL,  C_ELPS,  KC_PIPE, KC_LCBR, KC_RCBR, _______},
+  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
 },
 
 [_NUMPAD] = {
@@ -140,9 +139,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_ADJUST] = {
   {_______, _______, _______, KC_PGUP,     _______,   _______,   _______,   KC_BTN1, KC_MS_U,  KC_BTN2, _______, _______},
-  {_______, _______, _______, KC_PGDN,     _______,   PREV_TAB,  NEXT_TAB,  KC_MS_L, KC_MS_D,  KC_MS_R, _______, _______},
-  {_______, RESET,   _______, KC__VOLDOWN, KC__VOLUP, PREV_PANE, NEXT_PANE, RGB_M_P, RGB_M_SW, RGB_M_X, _______, _______},
-  {_______, _______, _______, _______,     _______,   CAPTURE,   NEXT_WIN,  _______, _______,  _______, _______, _______}
+  {_______, _______, _______, KC_PGDN,     _______,   TAB_PREV,  TAB_NEXT,  KC_MS_L, KC_MS_D,  KC_MS_R, _______, _______},
+  {_______, RESET,   _______, KC__VOLDOWN, KC__VOLUP, PANE_PREV, PANE_NEXT, RGB_M_P, RGB_M_SW, RGB_M_X, _______, _______},
+  {_______, _______, _______, _______,     _______,   CAPTURE,   _______,   _______, _______,  _______, _______, _______}
 }
 
 };
