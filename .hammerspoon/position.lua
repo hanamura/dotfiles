@@ -21,9 +21,8 @@ local sizes = {2, 3, 3/2}
 local fullScreenSizes = {1, 4/3, 2}
 
 local GRID = {w = 24, h = 24}
-hs.grid.setGrid(GRID.w .. 'x' .. GRID.h)
-hs.grid.MARGINX = 0
-hs.grid.MARGINY = 0
+hs.grid.setGrid(hs.geometry(nil, nil, GRID.w, GRID.h))
+hs.grid.setMargins(hs.geometry(0, 0))
 
 local pressed = {
   up = false,
