@@ -60,28 +60,41 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_R] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_r_finished, dance_r_reset),
 };
 
+// shortcuts
 #define CAPTURE LGUI(LSFT(LCTL(KC_4)))
+
+// prev / next actions
 #define PREV_TAB LGUI(LSFT(KC_LBRC))
 #define NEXT_TAB LGUI(LSFT(KC_RBRC))
 #define PREV_PANE LGUI(KC_LBRC)
 #define NEXT_PANE LGUI(KC_RBRC)
+#define NEXT_WIN LGUI(KC_GRV)
+
+// mod taps
 #define CMD_EISU MT(MOD_LGUI,KC_LANG2)
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
-#define NEXT_WIN LGUI(KC_GRV)
-#define ELLIPSIS LALT(KC_SCLN)
 #define CTL_ESC MT(MOD_LCTL,KC_ESC)
+
+// characters
+#define ELLIPSIS LALT(KC_SCLN)
 #define TRU_DQT LALT(KC_LBRC)
 #define TRU_QT LALT(KC_RBRC)
-#define NUMPAD_Z LT(_NUMPAD,KC_Z)
+
+// tap dances
 #define TDL TD(TD_L)
 #define TDR TD(TD_R)
-#define W_UP LCAG(KC_UP)
+
+// layers
+#define NUMPAD_Z LT(_NUMPAD,KC_Z)
+
+// window management
+#define WS_EAST LCAG(KC_SCLN)
+#define WS_WEST LCAG(KC_H)
 #define W_DOWN LCAG(KC_DOWN)
+#define W_FULL LCAG(KC_F)
 #define W_LEFT LCAG(KC_LEFT)
 #define W_RIGHT LCAG(KC_RGHT)
-#define W_FULL LCAG(KC_F)
-#define WS_WEST LCAG(KC_H)
-#define WS_EAST LCAG(KC_SCLN)
+#define W_UP LCAG(KC_UP)
 
 extern keymap_config_t keymap_config;
 
