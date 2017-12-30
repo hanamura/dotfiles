@@ -183,14 +183,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
-    case NUMPAD:
-      if (record->event.pressed) {
-        layer_on(_NUMPAD);
-      } else {
-        layer_off(_NUMPAD);
-      }
-      return false;
-      break;
     case WINDOW:
       if (record->event.pressed) {
         layer_on(_WINDOW);
