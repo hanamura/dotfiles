@@ -140,10 +140,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_ADJUST] = KEYMAP( \
-  _______, _______, _______, KC_PGUP,     _______,   _______,   _______,   KC_BTN1, KC_MS_U,  KC_BTN2, RGB_HUI, RGB_HUD, \
-  _______, _______, _______, KC_PGDN,     _______,   TAB_PREV,  TAB_NEXT,  KC_MS_L, KC_MS_D,  KC_MS_R, RGB_SAI, RGB_SAD, \
-  _______, RESET,   _______, KC__VOLDOWN, KC__VOLUP, PANE_PREV, PANE_NEXT, RGB_M_P, RGB_M_SW, RGB_M_X, RGB_VAI, RGB_VAD, \
-  _______, _______, _______, _______,     _______,   CAPTURE,   _______,   _______, _______,  _______, _______, RGB_TOG  \
+  _______, _______, _______, KC_PGUP, KC_VOLU, _______,   _______,   KC_BTN1, KC_MS_U,  KC_BTN2, RGB_HUI, RGB_HUD, \
+  _______, _______, _______, KC_PGDN, KC_VOLD, TAB_PREV,  TAB_NEXT,  KC_MS_L, KC_MS_D,  KC_MS_R, RGB_SAI, RGB_SAD, \
+  _______, RESET,   _______, _______, _______, PANE_PREV, PANE_NEXT, RGB_M_P, RGB_M_SW, RGB_M_X, RGB_VAI, RGB_VAD, \
+  _______, _______, _______, _______, _______, CAPTURE,   _______,   _______, _______,  _______, _______, RGB_TOG  \
 )
 
 };
