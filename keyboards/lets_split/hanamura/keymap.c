@@ -72,7 +72,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 // mod taps
 #define CMD_EISU MT(MOD_LGUI,KC_LANG2)
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
-#define CTL_ESC MT(MOD_LCTL,KC_ESC)
 #define CTL_TAB MT(MOD_LCTL,KC_TAB)
 
 // mod

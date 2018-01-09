@@ -71,7 +71,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 // mod taps
 #define CMD_EISU MT(MOD_LGUI,KC_LANG2)
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
-#define CTL_ESC MT(MOD_LCTL,KC_ESC)
+#define CTL_TAB MT(MOD_LCTL,KC_TAB)
 
 // mod
 #define M_CAG LCTL(LALT(KC_LGUI))
@@ -87,6 +87,10 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 // layers
 #define NUMPAD_Z LT(_NUMPAD,KC_Z)
+
+// macos focuses
+#define FO_MENU LCTL(KC_F2)
+#define FO_STMN LCTL(KC_F8)
 
 extern keymap_config_t keymap_config;
 
@@ -108,8 +112,8 @@ enum planck_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = {
-  {KC_TAB,  KC_Q,     KC_W,    KC_E,     KC_R,  KC_T,    KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC},
-  {CTL_ESC, KC_A,     KC_S,    KC_D,     KC_F,  KC_G,    KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT},
+  {KC_ESC,  KC_Q,     KC_W,    KC_E,     KC_R,  KC_T,    KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC},
+  {CTL_TAB, KC_A,     KC_S,    KC_D,     KC_F,  KC_G,    KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT},
   {KC_LSFT, NUMPAD_Z, KC_X,    KC_C,     KC_V,  KC_B,    KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT},
   {M_CAG,   KC_LCTL,  KC_LALT, CMD_EISU, LOWER, KC_LSFT, KC_SPC, RAISE, CMD_KANA, KC_RALT, KC_RCTL, M_CAG}
 },
@@ -136,10 +140,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 
 [_ADJUST] = {
-  {_______, _______, _______, KC_PGUP,     _______,   _______,   _______,   KC_BTN1, KC_MS_U,  KC_BTN2, _______, _______},
-  {_______, _______, _______, KC_PGDN,     _______,   TAB_PREV,  TAB_NEXT,  KC_MS_L, KC_MS_D,  KC_MS_R, _______, _______},
-  {_______, RESET,   _______, KC__VOLDOWN, KC__VOLUP, PANE_PREV, PANE_NEXT, RGB_M_P, RGB_M_SW, RGB_M_X, _______, _______},
-  {_______, _______, _______, _______,     _______,   CAPTURE,   _______,   _______, _______,  _______, _______, _______}
+  {_______, _______, _______, KC_PGUP, KC_VOLU, FO_MENU,   FO_STMN,   KC_BTN1, KC_MS_U,  KC_BTN2, _______, _______},
+  {_______, _______, _______, KC_PGDN, KC_VOLD, TAB_PREV,  TAB_NEXT,  KC_MS_L, KC_MS_D,  KC_MS_R, _______, _______},
+  {_______, RESET,   _______, _______, _______, PANE_PREV, PANE_NEXT, RGB_M_P, RGB_M_SW, RGB_M_X, _______, _______},
+  {_______, _______, _______, _______, _______, CAPTURE,   _______,   _______, _______,  _______, _______, _______}
 }
 
 };
