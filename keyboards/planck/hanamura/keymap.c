@@ -59,27 +59,34 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_R] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_r_finished, dance_r_reset),
 };
 
+// shortcuts
 #define CAPTURE LGUI(LSFT(LCTL(KC_4)))
+
+// prev / next actions
 #define TAB_PREV LGUI(LSFT(KC_LBRC))
 #define TAB_NEXT LGUI(LSFT(KC_RBRC))
 #define PANE_PREV LGUI(KC_LBRC)
 #define PANE_NEXT LGUI(KC_RBRC)
+
+// mod taps
 #define CMD_EISU MT(MOD_LGUI,KC_LANG2)
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
-#define C_ELPS LALT(KC_SCLN)
 #define CTL_ESC MT(MOD_LCTL,KC_ESC)
+
+// mod
+#define M_CAG LCTL(LALT(KC_LGUI))
+
+// characters
+#define C_ELPS LALT(KC_SCLN)
 #define C_TRUDQ LALT(KC_LBRC)
 #define C_TRUSQ LALT(KC_RBRC)
-#define NUMPAD_Z LT(_NUMPAD,KC_Z)
+
+// tap dances
 #define TDL TD(TD_L)
 #define TDR TD(TD_R)
-#define W_UP LCAG(KC_UP)
-#define W_DOWN LCAG(KC_DOWN)
-#define W_LEFT LCAG(KC_LEFT)
-#define W_RIGHT LCAG(KC_RGHT)
-#define W_FULL LCAG(KC_F)
-#define WS_WEST LCAG(KC_H)
-#define WS_EAST LCAG(KC_SCLN)
+
+// layers
+#define NUMPAD_Z LT(_NUMPAD,KC_Z)
 
 extern keymap_config_t keymap_config;
 
@@ -88,7 +95,6 @@ enum planck_layers {
   _LOWER,
   _RAISE,
   _NUMPAD,
-  _WINDOW,
   _ADJUST
 };
 
@@ -96,8 +102,7 @@ enum planck_keycodes {
   QWERTY = SAFE_RANGE,
   LOWER,
   RAISE,
-  NUMPAD,
-  WINDOW
+  NUMPAD
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -106,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_TAB,  KC_Q,     KC_W,    KC_E,     KC_R,  KC_T,    KC_Y,   KC_U,  KC_I,     KC_O,    KC_P,    KC_BSPC},
   {CTL_ESC, KC_A,     KC_S,    KC_D,     KC_F,  KC_G,    KC_H,   KC_J,  KC_K,     KC_L,    KC_SCLN, KC_ENT},
   {KC_LSFT, NUMPAD_Z, KC_X,    KC_C,     KC_V,  KC_B,    KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT},
-  {WINDOW,  KC_LCTL,  KC_LALT, CMD_EISU, LOWER, KC_LSFT, KC_SPC, RAISE, CMD_KANA, KC_RALT, KC_RCTL, XXXXXXX}
+  {M_CAG,   KC_LCTL,  KC_LALT, CMD_EISU, LOWER, KC_LSFT, KC_SPC, RAISE, CMD_KANA, KC_RALT, KC_RCTL, M_CAG}
 },
 
 [_LOWER] = {
@@ -128,13 +133,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {_______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PMNS, KC_P4,   KC_P5, KC_P6,   KC_PAST, _______},
   {_______, _______, _______, _______, _______, _______, KC_PEQL, KC_P1,   KC_P2, KC_P3,   KC_PSLS, _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, KC_P0, KC_PDOT, KC_PCMM, _______}
-},
-
-[_WINDOW] = {
-  {_______, _______, _______, _______, _______, _______, _______, _______, W_UP,    _______, _______, _______},
-  {_______, _______, _______, _______, _______, _______, WS_WEST, W_LEFT,  W_FULL,  W_RIGHT, WS_EAST, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______, W_DOWN,  _______, _______, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
 },
 
 [_ADJUST] = {
