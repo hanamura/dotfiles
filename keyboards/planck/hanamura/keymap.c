@@ -59,20 +59,31 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_R] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_r_finished, dance_r_reset),
 };
 
+// shortcuts
 #define CAPTURE LGUI(LSFT(LCTL(KC_4)))
+
+// prev / next actions
 #define TAB_PREV LGUI(LSFT(KC_LBRC))
 #define TAB_NEXT LGUI(LSFT(KC_RBRC))
 #define PANE_PREV LGUI(KC_LBRC)
 #define PANE_NEXT LGUI(KC_RBRC)
+
+// mod taps
 #define CMD_EISU MT(MOD_LGUI,KC_LANG2)
 #define CMD_KANA MT(MOD_RGUI,KC_LANG1)
-#define C_ELPS LALT(KC_SCLN)
 #define CTL_ESC MT(MOD_LCTL,KC_ESC)
+
+// characters
+#define C_ELPS LALT(KC_SCLN)
 #define C_TRUDQ LALT(KC_LBRC)
 #define C_TRUSQ LALT(KC_RBRC)
-#define NUMPAD_Z LT(_NUMPAD,KC_Z)
+
+// tap dances
 #define TDL TD(TD_L)
 #define TDR TD(TD_R)
+
+// layers
+#define NUMPAD_Z LT(_NUMPAD,KC_Z)
 
 extern keymap_config_t keymap_config;
 
