@@ -92,7 +92,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 // macos focuses
 #define FO_MENU LCTL(KC_F2)
-#define FO_STMN LCTL(KC_F8)
+#define FO_TOOL LCTL(KC_F5)
 
 extern keymap_config_t keymap_config;
 
@@ -144,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_ADJUST] = KEYMAP( \
-  _______, _______, _______, KC_PGUP, KC_VOLU, FO_MENU,   FO_STMN,   KC_BTN1, KC_MS_U,  KC_BTN2, RGB_HUI, RGB_HUD, \
+  _______, _______, _______, KC_PGUP, KC_VOLU, FO_MENU,   FO_TOOL,   KC_BTN1, KC_MS_U,  KC_BTN2, RGB_HUI, RGB_HUD, \
   _______, _______, _______, KC_PGDN, KC_VOLD, TAB_PREV,  TAB_NEXT,  KC_MS_L, KC_MS_D,  KC_MS_R, RGB_SAI, RGB_SAD, \
   _______, RESET,   _______, _______, _______, PANE_PREV, PANE_NEXT, RGB_M_P, RGB_M_SW, RGB_M_X, RGB_VAI, RGB_VAD, \
   _______, _______, _______, _______, _______, CAPTURE,   _______,   _______, _______,  _______, _______, RGB_TOG  \
