@@ -88,22 +88,6 @@ __link() {
 
   # hammerspoon
   __link $repo/.hammerspoon $HOME/.hammerspoon
-
-  # qmk
-
-  # $ make planck/rev4:hanamura:dfu
-  rm -rf $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
-  cp -r $repo/keyboards/planck/hanamura $repo/qmk_firmware/keyboards/planck/keymaps/hanamura
-
-  # $ make lets_split/rev2:hanamura:avrdude
-  rm -rf $repo/qmk_firmware/keyboards/lets_split/keymaps/hanamura
-  cp -r $repo/keyboards/lets_split/hanamura $repo/qmk_firmware/keyboards/lets_split/keymaps/hanamura
-
-  # $ make nyquist/rev1:hanamura:avrdude
-  rm -rf $repo/qmk_firmware/keyboards/nyquist/keymaps/hanamura
-  cp -r $repo/keyboards/nyquist/hanamura $repo/qmk_firmware/keyboards/nyquist/keymaps/hanamura
-
-  echo "⌨️  Copy keymaps"
 }
 
 unset repo
