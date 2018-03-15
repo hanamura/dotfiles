@@ -105,7 +105,7 @@ function fullDimension(dim)
   end
 end
 
-hs.hotkey.bind(hyper, "h", function ()
+hs.hotkey.bind(hyper, "g", function ()
   hs.window.frontmostWindow():moveOneScreenWest()
 end)
 
@@ -114,7 +114,7 @@ hs.hotkey.bind(hyper, ";", function ()
 end)
 
 -- down
-hs.hotkey.bind(hyper, ",", function ()
+hs.hotkey.bind(hyper, "m", function ()
   nextStep('h', true, function (cell, nextSize)
     cell.y = GRID.h - GRID.h / nextSize
     cell.h = GRID.h / nextSize
@@ -130,7 +130,7 @@ hs.hotkey.bind(hyper, "l", function ()
 end)
 
 -- left
-hs.hotkey.bind(hyper, "j", function ()
+hs.hotkey.bind(hyper, "h", function ()
   nextStep('w', false, function (cell, nextSize)
     cell.x = 0
     cell.w = GRID.w / nextSize
@@ -138,7 +138,7 @@ hs.hotkey.bind(hyper, "j", function ()
 end)
 
 -- up
-hs.hotkey.bind(hyper, "i", function ()
+hs.hotkey.bind(hyper, "u", function ()
   nextStep('h', false, function (cell, nextSize)
     cell.y = 0
     cell.h = GRID.h / nextSize
@@ -146,6 +146,9 @@ hs.hotkey.bind(hyper, "i", function ()
 end)
 
 -- center
+hs.hotkey.bind(hyper, "j", function ()
+  nextFullScreenStep()
+end)
 hs.hotkey.bind(hyper, "k", function ()
   nextFullScreenStep()
 end)
