@@ -3,12 +3,7 @@
 
 export ZSH=$HOME/.oh-my-zsh
 
-# MacVim’s :sh
-if [ $TERM = 'dumb' ]; then
-  ZSH_THEME="evan"
-else
-  ZSH_THEME="robbyrussell"
-fi
+ZSH_THEME="robbyrussell"
 
 plugins=(
   brew
