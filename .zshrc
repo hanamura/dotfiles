@@ -50,7 +50,7 @@ typeset -U fpath FPATH
 typeset -U manpath MANPATH
 
 export LANG=ja_JP.UTF-8
-export EDITOR=vim
+export EDITOR=nvim
 
 # homebrew
 

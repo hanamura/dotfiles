@@ -17,7 +17,7 @@
 [core]
   excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes
-  editor = /usr/local/bin/vim
+  editor = /usr/local/bin/nvim
 
 [color]
   ui = auto
