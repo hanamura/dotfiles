@@ -1,5 +1,7 @@
 /.atom/.apm
 /.atom/blob-store
 /.atom/packages
+/.config/*
+!/.config/nvim
 /.vim/bundle/*
 /.vim/plugged/*

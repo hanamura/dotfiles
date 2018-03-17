@@ -62,6 +62,9 @@ __link() {
   __link $repo/.gitconfig        $HOME/.gitconfig
   __link $repo/.gitignore_global $HOME/.gitignore_global
 
+  # config
+  __link $repo/.config $HOME/.config
+
   # vim
   __link $repo/.vim                    $HOME/.vim
   __link $repo/.snippets               $HOME/.snippets
