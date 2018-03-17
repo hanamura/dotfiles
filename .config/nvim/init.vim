@@ -223,6 +223,7 @@ augroup filetypes
   autocmd BufNewFile,BufRead .babelrc setlocal filetype=json
   autocmd BufNewFile,BufRead .eslintrc setlocal filetype=json
   autocmd BufNewFile,BufRead .stylelintrc setlocal filetype=json
+  autocmd BufNewFile,BufRead .tern-project setlocal filetype=json
 
   " htmldjango
   autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
