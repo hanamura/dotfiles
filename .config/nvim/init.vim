@@ -168,6 +168,9 @@ let g:ale_linters={
       \ 'scss': ['stylelint'],
       \ }
 
+" json
+let g:vim_json_syntax_conceal=0
+
 " other keymaps
 nn <Esc><Esc> :noh<CR>
 
