@@ -7,7 +7,7 @@
 - OS: macOS
 - Package Manager: Homebrew
 - Shell: zsh with oh-my-zsh
-- Editor: Vim
+- Editor: Vim and Neovim
 
 ## Usage
 
