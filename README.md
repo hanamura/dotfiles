@@ -9,6 +9,10 @@
 - Shell: zsh with oh-my-zsh
 - Editor: Vim and Neovim
 
+## Keymaps
+
+Custom keymaps for QMK Firmware are moved to [https://github.com/hanamura/qmk_firmware](https://github.com/hanamura/qmk_firmware).
+
 ## Usage
 
 ### Setup
