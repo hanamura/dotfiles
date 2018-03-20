@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle']}
 
 " edit
 Plug 'Lokaltog/vim-easymotion'
+Plug 'kana/vim-smartword'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
@@ -170,6 +171,11 @@ let g:ale_linters={
 
 " json
 let g:vim_json_syntax_conceal=0
+
+" smartword
+map b <Plug>(smartword-b)
+map e <Plug>(smartword-e)
+map w <Plug>(smartword-w)
 
 " other keymaps
 nn <Esc><Esc> :noh<CR>
