@@ -206,6 +206,9 @@ vn <Leader>y "*y
 nn <Leader>yy "*yy
 vn <Leader>yy "*yy
 
+no <silent> gp "0p
+no <silent> gP "0P
+
 nn <Leader>w :w<CR>
 
 nn ; :
