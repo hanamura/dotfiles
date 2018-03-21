@@ -61,6 +61,7 @@ set cursorline
 set expandtab
 set hidden
 set ignorecase
+set inccommand=split
 set list
 set listchars=tab:▸-,trail:-
 set number
