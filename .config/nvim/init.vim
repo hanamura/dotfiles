@@ -45,7 +45,6 @@ Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/neosnippet.vim'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 call plug#end()
 
