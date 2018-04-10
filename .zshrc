@@ -147,6 +147,11 @@ if type go >/dev/null 2>&1; then
   )
 fi
 
+# phpbrew
+# =======
+
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
 # local zshrc
 # ===========
 
