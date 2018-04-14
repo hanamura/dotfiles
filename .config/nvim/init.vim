@@ -181,9 +181,14 @@ let g:vim_json_syntax_conceal=0
 
 " fzf
 command! -bang -nargs=* GGrep
-  \ call fzf#vim#grep(
-  \   'git grep --line-number '.shellescape(<q-args>), 0,
-  \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
+      \ call fzf#vim#grep(
+      \   'git grep --line-number '.shellescape(<q-args>), 0,
+      \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
+
+nn <Leader>a :Ag<CR>
+nn <Leader>b :Buffers<CR>
+nn <Leader>f :GFiles<CR>
+nn <Leader>g :GGrep<CR>
 
 " ack
 if executable('ag')
