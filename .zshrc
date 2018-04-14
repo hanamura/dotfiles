@@ -152,6 +152,11 @@ fi
 
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
+# fzf
+# ===
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # local zshrc
 # ===========
 

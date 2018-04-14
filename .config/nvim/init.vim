@@ -40,11 +40,15 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'endel/ctrlp-filetype.vim'
 Plug 'mattn/ctrlp-ghq'
 
+" fzf
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'junegunn/fzf.vim'
+
 " completion
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/neosnippet.vim'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
 
 call plug#end()
 
