@@ -29,6 +29,7 @@ Plug 'othree/yajs.vim', {'for': ['javascript']}
 
 " utility
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mileszs/ack.vim'
 Plug 'thinca/vim-qfreplace'
 Plug 'tpope/vim-fugitive'
 
@@ -178,11 +179,15 @@ let g:ale_linters={
 let g:vim_json_syntax_conceal=0
 
 " fzf
-
 command! -bang -nargs=* GGrep
   \ call fzf#vim#grep(
   \   'git grep --line-number '.shellescape(<q-args>), 0,
   \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
+
+" ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " smartword
 map b <Plug>(smartword-b)
