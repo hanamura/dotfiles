@@ -28,6 +28,7 @@ Plug 'kchmck/vim-coffee-script', {'for': ['coffee']}
 Plug 'othree/yajs.vim', {'for': ['javascript']}
 
 " utility
+Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mileszs/ack.vim'
 Plug 'thinca/vim-qfreplace'
