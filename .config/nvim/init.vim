@@ -187,6 +187,7 @@ nn <Leader>a :Ag<CR>
 nn <Leader>b :Buffers<CR>
 nn <Leader>f :GFiles<CR>
 nn <Leader>g :GGrep<CR>
+nn <Leader>t :Filetypes<CR>
 
 " ack
 if executable('ag')
