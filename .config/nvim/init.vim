@@ -37,11 +37,6 @@ Plug 'tpope/vim-fugitive'
 " colorscheme
 Plug 'morhetz/gruvbox'
 
-" ctrlp
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'endel/ctrlp-filetype.vim'
-Plug 'mattn/ctrlp-ghq'
-
 " fzf
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
@@ -123,37 +118,6 @@ nmap <silent> <C-t> :NERDTreeToggle<CR>
 vmap <silent> <C-t> <Esc>:NERDTreeToggle<CR>
 omap <silent> <C-t> :NERDTreeToggle<CR>
 cmap <silent> <C-t> <C-u>:NERDTreeToggle<CR>
-
-" ctrlp
-let g:ctrlp_map='<C-l>'
-let g:ctrlp_cmd='CtrlP'
-let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_extensions=[
-      \ 'filetype',
-      \ 'ghq',
-      \ ]
-let g:ctrlp_show_hidden=1
-let g:ctrlp_prompt_mappings={
-      \ 'PrtSelectMove("j")':   ['<c-n>', '<c-j>', '<down>'],
-      \ 'PrtSelectMove("k")':   ['<c-p>', '<c-k>', '<up>'],
-      \ 'PrtHistory(-1)':       [],
-      \ 'PrtHistory(1)':        [],
-      \ 'AcceptSelection("e")': ['<c-e>', '<cr>', '<2-LeftMouse>'],
-      \ 'PrtCurEnd()':          [],
-      \ 'PrtCurRight()':        ['<right>'],
-      \ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>', '<c-l>'],
-      \ }
-let g:ctrlp_match_window='bottom,order:btt,min:1,max:30,results:30'
-let g:ctrlp_custom_ignore={
-      \ 'dir':  '\v[\/](\.(cache|git|hg|svn|sass-cache|jekyll)|node_modules|bower_components|wp-content)$',
-      \ 'file': '\v\.(DS_Store|eot|gif|ico|lock|jar|jpeg|jpg|png|sqlite|swf|ttf|webp|woff|woff2|zip)$',
-      \ }
-let g:ctrlp_max_files=30000
-let g:ctrlp_user_command=[
-      \ '.git',
-      \ 'cd %s && git ls-files | grep -v "\.\(eot\|gif\|ico\|lock\|jar\|jpeg\|jpg\|pdf\|png\|sqlite\|swf\|ttf\|webp\|woff\|woff2\|zip\)$"',
-      \ 'find %s -type f',
-      \ ]
 
 " easymotion
 let g:EasyMotion_do_mapping=0
