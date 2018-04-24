@@ -5,3 +5,9 @@
 !/.config/nvim
 /.vim/bundle/*
 /.vim/plugged/*
+/.local/**
+!/.local/share/
+!/.local/share/nvim/
+!/.local/share/nvim/site/
+!/.local/share/nvim/site/autoload/
+!/.local/share/nvim/site/autoload/plug.vim

@@ -65,6 +65,9 @@ __link() {
   # config
   __link $repo/.config $HOME/.config
 
+  # local
+  __link $repo/.local $HOME/.local
+
   # vim
   __link $repo/.vim                    $HOME/.vim
   __link $repo/.snippets               $HOME/.snippets
