@@ -13,6 +13,15 @@
 
 Custom keymaps for QMK Firmware are moved to [https://github.com/hanamura/qmk_firmware](https://github.com/hanamura/qmk_firmware).
 
+## Other Settings
+
+# ## Key Repeat
+
+```sh
+$ defaults write -g KeyRepeat -int 3
+$ defaults write -g InitialKeyRepeat -int 18
+```
+
 ## Usage
 
 ### Setup
