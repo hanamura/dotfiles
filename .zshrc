@@ -122,6 +122,7 @@ alias mp4tomp3='find . -type f -name "*.mp4" -print0 | perl -pe "s/\.mp4\0/\0/g"
 
 export NVM_DIR="/Users/hanamura/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # rbenv
 # =====
