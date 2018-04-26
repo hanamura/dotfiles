@@ -33,6 +33,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mileszs/ack.vim'
 Plug 'thinca/vim-qfreplace'
 Plug 'tpope/vim-fugitive'
+Plug 'tyru/open-browser-github.vim'
+Plug 'tyru/open-browser.vim'
 
 " colorscheme
 Plug 'morhetz/gruvbox'
