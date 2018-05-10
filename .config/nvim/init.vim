@@ -206,6 +206,11 @@ vn : q:a
 " autocmd
 " =======
 
+augroup formatoptions
+  autocmd!
+  autocmd FileType * set formatoptions=lmq
+augroup END
+
 augroup checktime
   autocmd!
   autocmd WinEnter * checktime
