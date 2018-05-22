@@ -156,6 +156,6 @@ end)
 -- cursor
 hs.hotkey.bind(hyper, "delete", function ()
   local frame = hs.screen.mainScreen():frame()
-  local dest = {x=frame.w - 50, y=frame.h - 50}
+  local dest = {x=frame.x + frame.w - 50, y=frame.y + frame.h - 50}
   hs.mouse.setAbsolutePosition(dest)
 end)
