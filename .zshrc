@@ -8,6 +8,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   bundler
   composer
+  docker
   gem
   git
   github
