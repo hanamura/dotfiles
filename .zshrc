@@ -153,6 +153,11 @@ fi
 
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
+# mysql
+# =====
+
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
 # fzf
 # ===
 
