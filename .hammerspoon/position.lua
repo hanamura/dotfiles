@@ -150,7 +150,19 @@ hs.hotkey.bind(hyper, "j", function ()
   nextFullScreenStep()
 end)
 hs.hotkey.bind(hyper, "k", function ()
-  nextFullScreenStep()
+  if not hs.window.focusedWindow() then
+    return
+  end
+
+  local win = hs.window.frontmostWindow()
+  local screenFrame = win:screen():frame()
+  local w = 1440
+  local h = 1000
+  local x = (screenFrame.w - w) / 2
+  local y = (screenFrame.h - h) / 2
+  win:setFrame({x = x, y = y, w = 1440, h = 1000})
+
+  hs.alert.show("1440px × 1000px")
 end)
 
 -- cursor
