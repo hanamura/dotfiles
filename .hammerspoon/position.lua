@@ -18,7 +18,7 @@
 hs.window.animationDuration = 0
 
 local sizes = {2, 3, 3/2}
-local fullScreenSizes = {1, 4/3, 2}
+local fullScreenSizes = {1, 2, 3}
 
 local GRID = {w = 24, h = 24}
 hs.grid.setGrid(hs.geometry(nil, nil, GRID.w, GRID.h))
