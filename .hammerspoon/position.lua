@@ -96,7 +96,7 @@ function fullDimension(dim)
 
     if (dim == 'x') then
       cell = '0,0 ' .. GRID.w .. 'x' .. GRID.h
-    else  
+    else
       cell[dim] = GRID[dim]
       cell[dim == 'w' and 'x' or 'y'] = 0
     end
