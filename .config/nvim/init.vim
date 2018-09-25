@@ -26,6 +26,7 @@ Plug 'elzr/vim-json', {'for': ['json']}
 Plug 'jwalton512/vim-blade', {'for': ['blade']}
 Plug 'kchmck/vim-coffee-script', {'for': ['coffee']}
 Plug 'othree/yajs.vim', {'for': ['javascript']}
+Plug 'cespare/vim-toml', {'for': ['toml']}
 
 " utility
 Plug 'airblade/vim-gitgutter'
