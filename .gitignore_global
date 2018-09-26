@@ -34,5 +34,8 @@ selenium-debug.log
 .tern-port
 .tern-project
 
+# netlify
+.netlify/
+
 # my local directory
 .hanamura/
