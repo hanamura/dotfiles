@@ -25,8 +25,14 @@ Plug 'cakebaker/scss-syntax.vim', {'for': ['scss']}
 Plug 'elzr/vim-json', {'for': ['json']}
 Plug 'jwalton512/vim-blade', {'for': ['blade']}
 Plug 'kchmck/vim-coffee-script', {'for': ['coffee']}
-Plug 'othree/yajs.vim', {'for': ['javascript']}
 Plug 'cespare/vim-toml', {'for': ['toml']}
+Plug 'othree/html5.vim', {'for': ['html']}
+" javascript
+Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
+Plug 'othree/yajs.vim', {'for': ['javascript', 'javascript.jsx']}
+Plug 'othree/es.next.syntax.vim', {'for': ['javascript', 'javascript.jsx']}
+Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
+Plug 'maxmellon/vim-jsx-pretty', {'for': ['javascript', 'javascript.jsx']}
 
 " utility
 Plug 'airblade/vim-gitgutter'
@@ -144,6 +150,9 @@ let g:ale_linters={
 " json
 let g:vim_json_syntax_conceal=0
 
+" javascript-libraries-syntax
+let g:used_javascript_libs='jquery,react,vue'
+
 " fzf
 command! -bang -nargs=* GGrep
       \ call fzf#vim#grep(
@@ -235,4 +244,9 @@ augroup filetypes
   autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
   autocmd BufRead,BufNewFile *.nunj set filetype=htmldjango
   autocmd BufRead,BufNewFile *.njk set filetype=htmldjango
+
+  " javascript
+  autocmd BufReadPre *.js let b:javascript_lib_use_jquery=1
+  autocmd BufReadPre *.js let b:javascript_lib_use_react=1
+  autocmd BufReadPre *.js let b:javascript_lib_use_vue=1
 augroup END
