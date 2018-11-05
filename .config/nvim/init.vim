@@ -115,6 +115,7 @@ let g:NERDTreeIgnore=[
       \ '\~$',
       \ '^.DS_Store$[[file]]',
       \ '^.bundle$[[dir]]',
+      \ '^.cache$[[dir]]',
       \ '^.git$[[dir]]',
       \ '^.gitmodules$[[file]]',
       \ '^.sass-cache$[[dir]]',
