@@ -33,6 +33,7 @@ Plug 'othree/yajs.vim', {'for': ['javascript', 'javascript.jsx']}
 Plug 'othree/es.next.syntax.vim', {'for': ['javascript', 'javascript.jsx']}
 Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
 Plug 'maxmellon/vim-jsx-pretty', {'for': ['javascript', 'javascript.jsx']}
+Plug 'prettier/vim-prettier', {'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue']}
 
 " utility
 Plug 'airblade/vim-gitgutter'
