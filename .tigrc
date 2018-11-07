@@ -1,48 +1,40 @@
 # merge
-
 bind main M ?git merge %(branch) --no-ff
 bind refs M ?git merge %(branch) --no-ff
 
 # rebase
-
 bind main I ?git rebase -i %(commit)
 bind refs I ?git rebase -i %(branch)
 
 # reset
-
 bind main H ?git reset --hard %(commit)
 bind refs H ?git reset --hard %(branch)
 
-# branch
+# revert
+bind main ! ?git revert %(commit)
 
+# branch
 bind refs D ?git branch -d %(branch)
 bind refs B ?git checkout -b "%(prompt Enter branch name: )" %(branch)
 
 # push
-
 bind generic U ?git push -u %(remote) %(repo:head)
 
 # pull
-
 bind generic P ?git pull %(remote)
 
 # fetch
-
 bind generic F ?git fetch --all --prune
 bind main    F ?git fetch --all --prune
 
 # rm
-
 bind status D ?rm %(file)
 
 # hub
-
 bind generic <Esc>p ?hub pull-request
 
 # whichpr
-
 bind refs W @whichpr open %(commit)
 
 # settings
-
 set status-show-untracked-files = yes
