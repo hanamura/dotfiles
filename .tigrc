@@ -27,6 +27,10 @@ bind generic P ?git pull %(remote)
 bind generic F ?git fetch --all --prune
 bind main    F ?git fetch --all --prune
 
+# do not quit
+bind diff <Ctrl-c> !git commit
+bind status <Ctrl-c> !git commit
+
 # rm
 bind status D ?rm %(file)
 
