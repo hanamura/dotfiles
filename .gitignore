@@ -1,10 +1,5 @@
-/.atom/.apm
-/.atom/blob-store
-/.atom/packages
 /.config/*
 !/.config/nvim
-/.vim/bundle/*
-/.vim/plugged/*
 /.local/**
 !/.local/share/
 !/.local/share/nvim/
