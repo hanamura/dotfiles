@@ -69,13 +69,8 @@ __link() {
   __link $repo/.local $HOME/.local
 
   # vim
-  __link $repo/.vim                    $HOME/.vim
-  __link $repo/.snippets               $HOME/.snippets
-  __link $repo/.vimrc                  $HOME/.vimrc
-  __link $repo/.vimrc.basic            $HOME/.vimrc.basic
-  __link $repo/.vimrc.bundle           $HOME/.vimrc.bundle
-  __link $repo/.vimrc.mapping          $HOME/.vimrc.mapping
-  __link $repo/.vimrc.plugins_settings $HOME/.vimrc.plugins_settings
+  __link $repo/.vim      $HOME/.vim
+  __link $repo/.snippets $HOME/.snippets
 
   # vscode
   __link $repo/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
