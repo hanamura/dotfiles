@@ -38,6 +38,7 @@ Plug 'prettier/vim-prettier', {'do': 'npm install', 'for': ['javascript', 'types
 " utility
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'embear/vim-localvimrc'
 Plug 'mileszs/ack.vim'
 Plug 'thinca/vim-qfreplace'
 Plug 'tpope/vim-fugitive'
@@ -148,6 +149,9 @@ let g:ale_linters={
       \ 'php': ['php', 'phpcs'],
       \ 'scss': ['stylelint'],
       \ }
+
+" localvimrc
+let g:localvimrc_sandbox=0
 
 " json
 let g:vim_json_syntax_conceal=0

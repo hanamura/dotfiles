@@ -24,8 +24,7 @@ npm-debug.log
 .svn/
 
 # local.vimrc
-.local.vimrc
-.local.*.vimrc
+.lvimrc
 
 # selenium
 selenium-debug.log
