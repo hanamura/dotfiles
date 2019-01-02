@@ -79,9 +79,6 @@ __link() {
   __link $repo/.zprofile  $HOME/.zprofile
   __link $repo/.zlogin    $HOME/.zlogin
 
-  # atom
-  __link $repo/.atom $HOME/.atom
-
   # tig
   __link $repo/.tigrc $HOME/.tigrc
 
