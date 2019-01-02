@@ -77,6 +77,10 @@ __link() {
   __link $repo/.vimrc.mapping          $HOME/.vimrc.mapping
   __link $repo/.vimrc.plugins_settings $HOME/.vimrc.plugins_settings
 
+  # vscode
+  __link $repo/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
+  __link $repo/vscode/settings.json    $HOME/Library/Application\ Support/Code/User/settings.json
+
   # zsh
   __link $repo/.oh-my-zsh $HOME/.oh-my-zsh
   __link $repo/.zshrc     $HOME/.zshrc

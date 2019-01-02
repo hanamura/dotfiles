@@ -1,0 +1,11 @@
+[
+  {
+    "key": "ctrl+t",
+    "command": "-editor.action.transposeLetters",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.files.action.focusFilesExplorer"
+  }
+]
