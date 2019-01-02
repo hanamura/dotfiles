@@ -51,9 +51,6 @@ __link() {
   # editorconfig
   __link $repo/.editorconfig $HOME/.editorconfig
 
-  # javascript
-  __link $repo/.eslintrc $HOME/.eslintrc
-
   # git
   __link $repo/.gitattributes    $HOME/.gitattributes
   __link $repo/.gitconfig        $HOME/.gitconfig
