@@ -133,21 +133,6 @@ if type rbenv >/dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
 
-# golang
-# ======
-
-if type go >/dev/null 2>&1; then
-  typeset -xTU GOROOT goroot
-  typeset -xTU GOPATH gopath
-  goroot=`go env GOROOT`
-  gopath=$HOME/.go
-  path=(
-    ${path}
-    ${GOROOT}/bin(N-/)
-    ${GOPATH}/bin(N-/)
-  )
-fi
-
 # phpbrew
 # =======
 
