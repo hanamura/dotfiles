@@ -160,7 +160,7 @@ hs.hotkey.bind(hyper, "k", function ()
   local h = 1000
   local x = (screenFrame.w - w) / 2
   local y = (screenFrame.h - h) / 2
-  win:setFrame({x = x, y = y, w = 1440, h = 1000})
+  win:setFrame({x = x, y = y, w = w, h = h})
 
   hs.alert.show("1440px × 1000px")
 end)
