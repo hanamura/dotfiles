@@ -27,6 +27,7 @@ Plug 'jwalton512/vim-blade', {'for': ['blade']}
 Plug 'kchmck/vim-coffee-script', {'for': ['coffee']}
 Plug 'cespare/vim-toml', {'for': ['toml']}
 Plug 'othree/html5.vim', {'for': ['html']}
+Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 " javascript
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
 Plug 'othree/yajs.vim', {'for': ['javascript', 'javascript.jsx']}
