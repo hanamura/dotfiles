@@ -116,6 +116,8 @@ alias html_escape="html-minifier | php -r \"echo htmlspecialchars(stream_get_con
 # mp4 to mp3
 
 alias mp4tomp3='find . -type f -name "*.mp4" -print0 | perl -pe "s/\.mp4\0/\0/g" | xargs -0 -I% ffmpeg -i %.mp4 %.mp3'
+alias mkvtomp3='find . -type f -name "*.mkv" -print0 | perl -pe "s/\.mkv\0/\0/g" | xargs -0 -I% ffmpeg -i %.mkv %.mp3'
+alias webmtomp3='find . -type f -name "*.webm" -print0 | perl -pe "s/\.webm\0/\0/g" | xargs -0 -I% ffmpeg -i %.webm %.mp3'
 
 # nvm
 # ===
