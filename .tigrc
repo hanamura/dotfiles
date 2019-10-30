@@ -24,8 +24,8 @@ bind generic U ?git push -u %(remote) %(repo:head)
 bind generic P ?git pull %(remote)
 
 # fetch
-bind generic F ?git fetch --all --prune
-bind main    F ?git fetch --all --prune
+bind generic F !git fetch --all --prune
+bind main    F !git fetch --all --prune
 
 # do not quit
 bind diff <Ctrl-c> !git commit
